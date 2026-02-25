@@ -20,7 +20,7 @@ You need either a USB port or a DVD drive for the installer media. An internet c
 
 If you’re upgrading from Ubuntu 24.04 LTS to 26.04 LTS, you get all the changes that happened in the six months since Ubuntu 25.10, as well as the changes in all the interim releases between 24.04 LTS and 26.04 LTS.
 
-For details, see the complete interim release notes: [24.10](https://discourse.ubuntu.com/t/oracular-oriole-release-notes/44878), {ref}`25.04 <ubuntu-25.04-release-notes>` and {ref}`25.10 <ubuntu-25.10-release-notes>`. Finally, review the latest {ref}`changes-since-ubuntu-25.10`.
+For details, see the complete interim release notes: {ref}`24.10 <ubuntu-24.10-release-notes>`, {ref}`25.04 <ubuntu-25.04-release-notes>` and {ref}`25.10 <ubuntu-25.10-release-notes>`. Finally, review the latest {ref}`changes-since-ubuntu-25.10`.
 
 …
 
