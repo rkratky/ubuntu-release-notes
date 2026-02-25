@@ -642,7 +642,7 @@ Starting with 22.04 LTS, besides the standard device-specific preinstalled image
 Other operating systems are not displayed in the boot menu anymore, unless Ubuntu has been installed alongside another operating system. Once all other operating systems are removed from the machine, detection of other operating systems is disabled, and to re-enable if after installing another OS, you will have to delete `/boot/grub/grub.cfg` and immediately run `update-grub` again.
 
 
-(heading--known-issues)=
+(22-04-known-issues)=
 ## Known Issues
 
 As is to be expected, with any release, there are some significant known bugs that users may run into with this release of Ubuntu. The ones we know about at this point (and some of the workarounds), are documented here so you don’t need to spend time reporting these bugs again:
@@ -710,7 +710,7 @@ This is being tracked in [~~bug #1934997~~](https://bugs.launchpad.net/ubuntu/+s
 
 No known issues yet.
 
-(heading--official-flavours)=
+(22-04-official-flavours)=
 ## Official flavours
 
 The release notes for the official flavours can be found at the following links:
@@ -723,7 +723,7 @@ The release notes for the official flavours can be found at the following links:
 * [Ubuntu Studio Release Notes](https://ubuntustudio.org/ubuntu-studio-22-04-lts-release-notes/)
 * [Xubuntu Release Notes](https://wiki.xubuntu.org/releases/22.04/release-notes)
 
-(heading--more-information)=
+(22-04-more-information)=
 ## More information
 
 Refer to {ref}`release-policy-and-schedule` and {ref}`project-and-community`.

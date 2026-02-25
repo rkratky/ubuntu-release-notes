@@ -32,7 +32,7 @@ If you’re upgrading from Ubuntu 22.04 LTS to 24.04 LTS, you get all the change
 For details, see the complete interim release notes: [22.10](https://discourse.ubuntu.com/t/kinetic-kudu-release-notes/27976), [23.04](https://discourse.ubuntu.com/t/lunar-lobster-release-notes/31910) and [23.10](https://discourse.ubuntu.com/t/mantic-minotaur-release-notes/35534). Finally, review the following changes since Ubuntu 23.10.
 
 
-(heading--new-features-in-24-04-lts)=
+(24-04-new-features-in-24-04-lts)=
 ## New features in 24.04 LTS
 
 ### Year 2038 support for the armhf architecture
@@ -1021,7 +1021,7 @@ There is no longer a need to install the `pi-bluetooth` package in order to enab
 
 The new arm64+largemem ISO includes a kernel with 64k page size. A larger page size can increase throughput, but comes at the cost of increased memory use, making this option more suitable for servers with plenty of memory. Typical use cases for this ISO include: machine learning, databases with many large entries, high performance computing.
 
-#### IBM Z and LinuxONE ![image|32x32](upload://dZM0RRlelqCcZc6RhqJGMW8DMZr.png) 
+#### IBM Z and LinuxONE
 
 * The key 's390-tools' package was step-by-step upgraded to latest v2.31.0 ([LP: #2049612](https://launchpad.net/bugs/2049612)), which incl. lots of updates, new tools and features, especially a secure guest tool to bind and associate APQNs crypto domains ([LP: #2003672](https://launchpad.net/bugs/2003672)).
 * Like on all other architectures, COMPAT_32BIT_TIME was also disabled on s390x ([LP: #2038583](https://launchpad.net/bugs/2038583)), and with that 31/32bit legacy support is removed ([LP: #2051683](https://launchpad.net/bugs/2051683)).
@@ -1050,7 +1050,7 @@ For an overview of Canonical supported boards see https://ubuntu.com/download/ri
 
 The RISC-V Ubuntu userland is compatible with all RVA20 hardware.
 
-(heading--known-issues)=
+(24-04-known-issues)=
 ## Known Issues
 
 As is to be expected with any release, there are some significant known bugs that users may encounter with this release of Ubuntu. The ones we know about at this point (and some of the workarounds) are documented here, so you don't need to spend time reporting these bugs again:
@@ -1175,7 +1175,7 @@ New GCE images will be built and published shortly after release to disable this
 
 * We have identified an issue with apparmor profiles on Confidential VM images available under the `cvm` plan of the offer `ubuntu-24_04-lts`. For example, the `rsyslog` service will fail to start on VMs launched from this plan. This is being investigated and a new image with a fix will be published shortly.
 
-(heading--official-flavours)=
+(24-04-official-flavours)=
 ## Official flavours
 
 Find the release notes for the official flavours at the following links:
@@ -1191,7 +1191,7 @@ Find the release notes for the official flavours at the following links:
 * [Ubuntu Kylin Release Notes](https://ubuntukylin.com/news/ubuntukylin2404-en.html)
 * [Ubuntu Cinnamon Release Notes](https://ubuntucinnamon.org/?p=1310)
 
-(heading--more-information)=
+(24-04-more-information)=
 ## More information
 
 Refer to {ref}`release-policy-and-schedule` and {ref}`project-and-community`.

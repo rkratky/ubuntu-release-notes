@@ -15,7 +15,7 @@ Current blockers:
 * [LP#2125535](https://bugs.launchpad.net/ubuntu/+source/rust-coreutils/+bug/2125535)
 * [LP#2127970](https://bugs.launchpad.net/ubuntu/+source/rust-coreutils/+bug/2127970)
 
-(heading--new-features-in-25-10)=
+(25-10-new-features-in-25-10)=
 ## New features in 25.10
 
 ### Updated Packages
@@ -559,7 +559,7 @@ Ubuntu 25.10 targets the RVA23S64 ISA profile. Systems that don't satisfy this r
 
 If you’d like to try it out in a VM, please refer to this guide https://canonical-ubuntu-boards.readthedocs-hosted.com/en/latest/how-to/qemu-riscv/
 
-(heading--known-issues)=
+(25-10-known-issues)=
 ## Known Issues
 
 As is to be expected with any release, there are some significant known bugs that users may encounter with this release of Ubuntu. The ones we know about at this point (and some of the workarounds) are documented here, so you don't need to spend time reporting these bugs again:
@@ -710,7 +710,7 @@ Nothing yet.
 
     One may proceed and complete the upgrade, but at the end of the process the system needs to be manually rebooted. The bug is tracked here: [LP: #2126934](https://launchpad.net/bugs/2126934)
 
-(heading--official-flavours)=
+(25-10-official-flavours)=
 ## Official flavours
 
 Find the release notes for the official flavours at the following links:
@@ -726,7 +726,7 @@ Find the release notes for the official flavours at the following links:
 * [Ubuntu Kylin Release Notes](https://ubuntukylin.com/news/ubuntukylin2510-en.html)
 * [Ubuntu Cinnamon Release Notes](https://ubuntucinnamon.org/?p=1406)
 
-(heading--more-information)=
+(25-10-more-information)=
 ## More information
 
 Refer to {ref}`release-policy-and-schedule` and {ref}`project-and-community`.
