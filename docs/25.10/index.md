@@ -334,7 +334,7 @@ The [libvirt ](https://libvirt.org) package was upgraded to version 11.6.0. Here
 * qemu: Add support for NVMe disks
 * qemu: add support for AMD IOMMU device
 * qemu: Add support for Intel ® TDX guests
-* Adds TDX as a new type of \<launchSecurity/>.
+* Adds TDX as a new type of `<launchSecurity/>`.
 * All helper programs are now detected from $PATH during runtime - allowing you to modify its behavior more easily
 * qemu: Added guest load averages to the output of virDomainGetGuestInfo
 * qemu: Add support for multiple iothreads for virtio-scsi controller
@@ -342,7 +342,7 @@ The [libvirt ](https://libvirt.org) package was upgraded to version 11.6.0. Here
 * qemu: Add support for parallel save/restore
 * qemu: Support for Block Disk Along with Throttle Filters
 * nodedev: Support ccwgroup based qeth devices
-* Introduce virtio-mem <memory/> model for s390 guests
+* Introduce virtio-mem `<memory/>` model for s390 guests
 
 For more details, please see [the upstream changelog ](https://libvirt.org/news.html#v11-4-0-2025-06-02).
 Additionally in Ubuntu, the **default URI choice** behavior was modified slightly: In the past Ubuntu enforced the `qemu:///system` URI by overriding `LIBVIRT_DEFAULT_URI` in `/etc/profile.d/libvirt-uri.sh`. Starting with Ubuntu 25.10, we're dropping that `profile.d` script in favour of a fallback mechanism, which still **perserves the default beahvior** as `qemu:///system` for privileged and non-privileged users, but allows to override that default choice by setting `LIBVIRT_DEFAULT_URI` manually or changing the `uri_default` parameter in `/etc/libvirt/libvirt.conf` or `~/.config/libvirt/libvirt.conf` (for non-privileged users) respectively.

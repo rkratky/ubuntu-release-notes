@@ -227,14 +227,14 @@ The `apt-key` command has been removed. Signature verification now makes direct 
 * mod_md: update to version 2.4.31
   * Improved behavior waiting for ACME server to verify domains.
   * Fix certificate retrieval on ACME renewal to not require a 'Location:' header returned by the ACME CA. This was the way it was done in ACME before it became an IETF standard. Let's Encrypt still supports this, but other CAs do not.
-  * When the server starts, it looks for new, staged certificates to activate. If the staged set of files in 'md/staging/<domain>' is messed up, this could prevent further renewals to happen. Now, when the staging set is present, but could not be activated due to an error, purge the whole directory.
+  * When the server starts, it looks for new, staged certificates to activate. If the staged set of files in `md/staging/<domain>` is messed up, this could prevent further renewals to happen. Now, when the staging set is present, but could not be activated due to an error, purge the whole directory.
   * Restore compatibility with OpenSSL < 1.1.
 * Add the ldap-search option to mod_authnz_ldap, allowing authorization to be based on arbitrary expressions that do not include the username.
 * mod_ssl: Restore support for loading PKCS#11 keys via ENGINE without "SSLCryptoDevice" configured.
 * http: Remove support for Request-Range header sent by Navigator 2-3 and MSIE 3.
 * mod_rewrite: Don't require [UNC] flag to preserve a leading // added by applying the perdir prefix to the substitution.
-* mod_proxy: Avoid AH01059 parsing error for SetHandler "unix:" URLs in <Location> (incomplete fix in 2.4.62).
-* mod_tls: removed the experimental module. It now is availble standalone from https://github.com/icing/mod_tls. The rustls provided API is not stable and does not align with the httpd release cycle.
+* mod_proxy: Avoid AH01059 parsing error for SetHandler "unix:" URLs in `<Location>` (incomplete fix in 2.4.62).
+* mod_tls: removed the experimental module. It now is available standalone from https://github.com/icing/mod_tls. The rustls provided API is not stable and does not align with the httpd release cycle.
 * mod_rewrite: Better question mark tracking to avoid UnsafeAllow3F.
 * mod_http2: Return connection monitoring to the event MPM when blocking on client updates.
 
@@ -394,7 +394,7 @@ The [libvirt ](https://libvirt.org) package was upgraded to version 10.10.0. Her
 
    When domain of `qemu` or `kvm` type have more than 255 vCPUs, IOMMU with EIM mode is required. Starting with this release libvirt automatically adds one (or turns on the EIM mode if there's IOMMU without it).
 
-* In 10.5 (thereby oracular) already support for `SEV-SNP` was introduced as another type of <launchSecurity/>. Its support is reported in both domain capabilities and virt-host-validate. Now also the qemu version in the release is ready to provide that.
+* In 10.5 (thereby oracular) already support for `SEV-SNP` was introduced as another type of `<launchSecurity/>`. Its support is reported in both domain capabilities and virt-host-validate. Now also the qemu version in the release is ready to provide that.
 
 * The Debian (and consequently the Ubuntu) libvirt package has been significantly redesigned. To quote its NEWS file:
 

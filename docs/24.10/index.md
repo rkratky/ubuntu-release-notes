@@ -205,7 +205,7 @@ Clamav is updated from version 1.0.5 to 1.3.1 in Oracular, bringing significant 
   * Introduced a customizable SystemD timer for running Freshclam updates, without sending Freshclam into the background.
   * Refined limit handling for large files
   * Added ability for Freshclam to use a client certificate PEM file and a private key PEM file for authentication to a private mirror
-  * Added the ability to extract images embedded in HTML CSS <style> blocks.
+  * Added the ability to extract images embedded in HTML CSS `<style>` blocks.
   * Enhancements relating to VBA extraction from office documents
   * Added support for aborting on standup if virus database is older than a configured number of days.
 
