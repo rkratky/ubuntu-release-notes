@@ -3,6 +3,13 @@
 
 These release notes for **Ubuntu 24.10** (Oracular Oriole) provide an overview of the release and document the known issues with Ubuntu and its flavours.
 
+:::{toctree}
+:maxdepth: 1
+:hidden:
+
+Release schedule <schedule>
+:::
+
 ## Support lifespan
 
 Ubuntu 24.10 will be supported for 9 months until July 2025. If you need long term support, we recommend you use [Ubuntu 24.04.1 LTS](https://ubuntu.com/download) which is supported until at least 2029.

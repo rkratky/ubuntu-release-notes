@@ -3,6 +3,13 @@
 
 These release notes for **Ubuntu 25.04** (Plucky Puffin) provide an overview of the release and document the known issues with Ubuntu and its flavours.
 
+:::{toctree}
+:maxdepth: 1
+:hidden:
+
+Release schedule <schedule>
+:::
+
 ## Dedication
 
 Subscribers to the `ubuntu-{devel-}announce` mailing list and long term participants in the Ubuntu community will have come across Steve Langasek's work. Steve, known in the community as vorlon, was a long-term member of the Release team (along with being a member of Archive Admin, Techboard, SRU team, and so on) and a colleague to many of us at Canonical. As a member of the Release team, Steve was responsible for devising many of the processes, policies, and tools which we use today, and teaching his fellow members the ropes. [Steve passed away on 1st January 2025](https://discourse.ubuntu.com/t/remembering-and-thanking-steve-langasek/52665) after being unwell for quite some time. The Ubuntu Release Team dedicates 25.04 “Plucky Puffin” to our colleague and friend, Steve Langasek. He is missed and will live in our hearts forever. Thank you for everything, Steve.
