@@ -1,4 +1,4 @@
-# Upcoming Ubuntu release schedules
+# Future Ubuntu release schedules
 
 :::{toctree}
 :maxdepth: 1

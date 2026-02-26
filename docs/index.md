@@ -110,6 +110,6 @@ Your comments, bug reports, patches and suggestions help fix bugs and improve th
 :maxdepth: 2
 :caption: Other releases
 
-Upcoming releases <upcoming>
+Future releases <future>
 Older releases <archive>
 :::
