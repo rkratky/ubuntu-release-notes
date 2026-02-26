@@ -1,3 +1,7 @@
+---
+tocdepth: 3
+---
+
 (ubuntu-22.04-lts-release-notes)=
 # Ubuntu 22.04 LTS release notes
 

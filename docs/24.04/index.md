@@ -1,3 +1,7 @@
+---
+tocdepth: 3
+---
+
 (ubuntu-24.04-lts-release-notes)=
 # Ubuntu 24.04 LTS release notes
 

@@ -1,3 +1,7 @@
+---
+tocdepth: 3
+---
+
 (ubuntu-25.10-release-notes)=
 # Ubuntu 25.10 release notes
 

@@ -1,3 +1,7 @@
+---
+tocdepth: 3
+---
+
 (ubuntu-24.10-release-notes)=
 # Ubuntu 24.10 release notes
 
