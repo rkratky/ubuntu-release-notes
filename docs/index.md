@@ -108,7 +108,7 @@ Your comments, bug reports, patches and suggestions help fix bugs and improve th
 :maxdepth: 2
 :caption: Currently in development
 
-26.10 (S* S*) <26.10/index>
+26.10 (S S) <26.10/index>
 :::
 
 :::{toctree}
