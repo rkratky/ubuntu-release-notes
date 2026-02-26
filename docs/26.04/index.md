@@ -1,7 +1,7 @@
 (ubuntu-26.04-lts-release-notes)=
 # Ubuntu 26.04 LTS release notes
 
-:::{rubric} 15 April 2026
+:::{rubric} 23 April 2026
 :::
 
 These release notes cover new features and changes in Ubuntu 26.04 LTS (Resolute Raccoon).
