@@ -3,6 +3,13 @@
 
 These release notes for **Ubuntu 25.10** (Questing Quokka) provide an overview of the release and document the known issues with Ubuntu and its flavours.
 
+:::{toctree}
+:maxdepth: 1
+:hidden:
+
+Release schedule <schedule>
+:::
+
 ## Support lifespan
 
 Ubuntu 25.10 will be supported for 9 months until July 2026. If you need long term support, we recommend you use [Ubuntu 24.04.3 LTS](https://ubuntu.com/download) which is supported until at least 2029.
