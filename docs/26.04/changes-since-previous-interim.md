@@ -49,6 +49,8 @@ OpenJDK 25 is the default Java toolchain.
 
 ...
 
+### Enterprise features
+
 ### Cloud features
 
 ### Security features
@@ -115,6 +117,8 @@ Other changes of importance are listed upstream:
 
 ### Development changes
 
+### Enterprise changes
+
 ### Cloud changes
 
 ### Security changes
@@ -132,6 +136,8 @@ Other changes of importance are listed upstream:
 
 ### Development deprecations
 
+### Enterprise deprecations
+
 ### Cloud deprecations
 
 ### Security deprecations
@@ -148,6 +154,8 @@ Other changes of importance are listed upstream:
 ### Server fixes
 
 ### Development fixes
+
+### Enterprise fixes
 
 ### Cloud fixes
 
@@ -272,6 +280,8 @@ Therefore, only users who have taken those steps and upgrade to Noble, will be a
 There is an AppArmor related bug where containers cannot be promptly stopped due to the recently added AppArmor profile for `runc`. The containers are always killed with `SIGKILL` due to the denials when trying to receive a signal. More details about this bug can be found [here](https://bugs.launchpad.net/ubuntu/+source/docker.io/+bug/2063099), and a workaround is described [here](https://bugs.launchpad.net/ubuntu/+source/docker.io/+bug/2063099/comments/4).
 
 ### Development issues
+
+### Enterprise issues
 
 ### Cloud issues
 
