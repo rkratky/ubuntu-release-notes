@@ -455,10 +455,8 @@ The Netplan network manager has been updated from version 1.0 to 1.2.
 
 :::{rubric} Package Management: APT 3.1
 :::
-:::{versionadded} 
-:::
 
-APT has been updated from version 2.7 to 3.0. 
+APT has been updated from version 2.7 to 3.1.
 
 The new dependency solver is now automatically used if the classic solver cannot find a solution to either find a solution or add more context to the failure, and in other cases to [evaluate its performance](https://discourse.ubuntu.com/t/evaluating-the-new-apt-solver-in-25-04/55618).
 
