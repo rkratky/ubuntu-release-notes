@@ -19,3 +19,37 @@ body:
     default: '26.04 LTS'
   validations:
     required: true
+- type: checkboxes
+  attributes:
+    label: Change type
+    description: |
+      What kind of change is this? Try to select just one if possible.
+    options:
+    - label: New feature or improvement
+    - label: Backwards-incompatible change, including removed features
+    - label: Deprecated feature -- will be removed in a later release
+    - label: Bug fix
+    - label: Known issue
+    - label: Something else (please describe)
+- type: checkboxes
+  attributes:
+    label: Part of Ubuntu
+    description: |
+      Which part of Ubuntu does the change affect? Try to select just one if possible.
+    options:
+    - label: Desktop
+    - label: Server
+    - label: Development tools
+    - label: Enterprise
+    - label: Cloud
+    - label: Security
+    - label: Real-time Ubuntu
+    - label: Hardware support
+    - label: A common, underlying change
+- type: textarea
+  attributes:
+    label: Description
+    description: |
+      Describe the change in detail.
+  validations:
+    required: true
