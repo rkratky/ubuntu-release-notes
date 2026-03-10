@@ -5,13 +5,6 @@ labels:
 assignees:
   - msuchane
 body:
-- type: textarea
-  attributes:
-    label: Ubuntu release
-    description: |
-      Which Ubuntu release is affected by this change? E.g. Ubuntu 26.04 LTS.
-  validations:
-    required: true
 - type: dropdown
   attributes:
     label: Ubuntu release
