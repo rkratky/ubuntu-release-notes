@@ -1,3 +1,7 @@
+---
+tocdepth: 3
+---
+
 (ubuntu-26.04-lts-release-notes)=
 # Ubuntu 26.04 LTS release notes
 
@@ -42,16 +46,14 @@ The following is an overview of the major changes.
 
 ### Desktop
 
-:::{rubric} Updated applications
-:::
+#### Updated applications
 
 * Firefox 🔥🦊 has been updated [to version 149](https://www.firefox.com/en-US/firefox/148.0/releasenotes/) / [150](https://www.firefox.com/en-US/firefox/148.0/releasenotes/).
 * LibreOffice 📚 has been updated from version 24.2 [to 25.8](https://wiki.documentfoundation.org/ReleaseNotes/25.8).
 * Thunderbird 🌩️🐦 has been updated [to version 128 "Supernova"](https://blog.thunderbird.net/2023/07/our-fastest-most-beautiful-release-ever-thunderbird-XY-supernova-is-here/).
 * GNU Image Manipulation Program 🖼️ has received a major update from version 2.10 [to 3.0](https://www.gimp.org/news/2025/03/16/gimp-3-0-released/).
 
-:::{rubric} GNOME 50
-:::
+#### GNOME 50
 
 The GNOME desktop environment has been updated from version 46 to 50. Major highlights:
 
@@ -65,28 +67,25 @@ The GNOME desktop environment has been updated from version 46 to 50. Major high
 
 For details, see the upstream release notes: [GNOME 47](https://release.gnome.org/47/), [GNOME 48](https://release.gnome.org/48/), [GNOME 49](https://release.gnome.org/49/) and [GNOME 50](https://release.gnome.org/50/).
 
-:::{rubric} New document viewer
-:::
+#### New document viewer
 :::{versionchanged} 25.04
 :::
 
 The Document Viewer app for viewing PDFs is now provided by Papers instead of Evince. Papers started with the Evince codebase but it has been updated to use GTK4 and partially rewritten in Rust.
 
-:::{rubric} New image viewer
-:::
+#### New image viewer
 :::{versionchanged} 25.10
 :::
+
 The Image Viewer app is now provided by [Loupe](https://apps.gnome.org/Loupe/) instead of Eye of GNOME (EOG). Loupe is written in Rust and powered by the [Glycin](https://gitlab.gnome.org/GNOME/glycin) library.
 
-:::{rubric} New terminal emulator
-:::
+#### New terminal emulator
 :::{versionchanged} 25.10
 :::
 
 The Terminal app is now provided by [Ptyxis](https://gitlab.gnome.org/chergert/ptyxis/-/blob/main/README.md?ref_type=heads) instead of GNOME Terminal.
 
-:::{rubric} Wayland session
-:::
+#### Wayland session
 :::{versionchanged} 25.10
 :::
 
@@ -94,8 +93,7 @@ The Ubuntu Desktop session now runs only on the Wayland back end. The [Ubuntu on
 
 Machines using Nvidia graphics now also fully support Wayland.
 
-:::{rubric} App Center enhancements
-:::
+#### App Center enhancements
 :::{versionadded} 24.10
 :::
 
@@ -108,35 +106,31 @@ The App Center now includes improvements, including:
 * Scrolling support for touch screens
 * Third party Deb installation
 
-:::{rubric} Security Center
-:::
+#### Security Center
 :::{versionadded} 24.10
 :::
 
 A new Security Center is included. It features the ability to easily enable or disable a new experimental [permissions prompting](https://discourse.ubuntu.com/t/ubuntu-desktop-s-24-10-dev-cycle-part-5-introducing-permissions-prompting/47963/1) feature for Home directory permissions.
 
-:::{rubric} Permission prompting
-:::
+#### Permission prompting
 :::{versionadded} 24.10
 :::
 
 Prompting is also supported by an additional seeded snap, `prompting-client`, for permissions prompt handling.
 
-:::{rubric} Better power optimization
-:::
+#### Better power optimization
 :::{versionadded} 24.10
 :::
+
 Power Profiles Manager [has been improved and optimized](https://gitlab.freedesktop.org/upower/power-profiles-daemon/-/releases/#0.23) to support better newer hardware features (especially AMD), can now support multiple optimization drivers and is now battery-aware to automatically increase the optimization levels when running on battery only.
 
-:::{rubric} Performance improvements in Windows games
-:::
+#### Performance improvements in Windows games
 :::{versionadded} 25.04
 :::
 
 A new NTSYNC driver that emulates WinNT sync primitives is available, delivering better performance potential for Windows games running on Wine and Proton (Steam Play).
 
-:::{rubric} New ARM64 Desktop image
-:::
+#### New ARM64 Desktop image
 :::{versionadded} 25.04
 :::
 
@@ -144,8 +138,7 @@ There is now an official generic ARM64 Desktop ISO targeting VMs, ACPI + EFI pla
 
 Initial hardware enablement work for the Snapdragon X Elite platform is included in the Desktop ISO.
 
-:::{rubric} Dual boot enhancements
-:::
+#### Dual boot enhancements
 :::{versionadded} 25.04
 :::
 
@@ -154,15 +147,13 @@ Improved dual boot user experience, with a focus on BitLocker protected Windows 
 * Added the option to install Ubuntu alongside existing BitLocker partitions if enough unallocated  space (or a sufficiently large and resizable partition) is available
 * Made encrypted installations and other 'advanced options' available for dual boot scenarios
 
-:::{rubric} JPEG XL support
-:::
+#### JPEG XL support
 :::{versionadded} 25.04
 :::
 
 The JPEG XL format is now supported without needing to install any additional packages
 
-:::{rubric} Accelerated video encoding and decoding
-:::
+#### Accelerated video encoding and decoding
 :::{versionadded} 25.10
 :::
 
@@ -172,8 +163,7 @@ Notably, you can record your screen at the original screen rate. Without VA-API,
 
 You can also install the library after installation. See [Record the screen](https://documentation.ubuntu.com/desktop/en/latest/how-to/record-the-screen/) in the Ubuntu Desktop documentation.
 
-:::{rubric} New update notifications
-:::
+#### New update notifications
 :::{versionadded} 25.10
 :::
 
@@ -181,15 +171,13 @@ When system updates are available, the Software Updater window no longer pops up
 
 An icon in the system tray reminds you that updates are available even after dismissing the notification. It also provides a quick way to apply all the updates or inspect them in the Software Updater.
 
-:::{rubric} Installer accessibility
-:::
+#### Installer accessibility
 :::{versionadded} 25.10
 :::
 
 The Ubuntu installer has received plenty of accessibility fixes for screen reader users.
 
-:::{rubric} Ubuntu Insights
-:::
+#### Ubuntu Insights
 :::{versionadded} 25.10
 :::
 
@@ -212,8 +200,7 @@ Any consent that you previously granted to Ubuntu Report will not be carried ove
 * Zig ⚡ is now available in Ubuntu. It defaults to version 0.14.1.
 * Ubuntu Toolchains has a new [homepage](https://ubuntu.com/toolchains).
 
-:::{rubric} OpenJDK 21 and TCK certification
-:::
+#### OpenJDK 21 and TCK certification
 :::{versionadded} 24.10
 :::
 
@@ -221,8 +208,7 @@ OpenJDK defaults to 21 (LTS), while version 25 (LTS) and an early access snapsho
 
 OpenJDK 21 and OpenJDK 17 packages are now TCK (Technology Compatibility Kit) certified on AMD64, ARM64, s390x, ppc64el and armhf. The Java TCK is the most comprehensive test suite that covers all aspects of Java SE specification including language features, libraries and APIs. This guarantees interoperability and conformance to standard.
 
-:::{rubric} Spring® snaps
-:::
+#### Spring® snaps
 :::{versionadded} 25.04
 :::
 
@@ -230,30 +216,26 @@ We are excited to announce the [devpack-for-spring](https://snapcraft.io/devpack
 
 Developers can now quickly build Ubuntu ROCK images for their Java applications using the [Gradle and Maven plugins for Rockcraft](https://github.com/rockcrafters/java-rockcraft-plugins).
 
-:::{rubric} GraalVM snap
-:::
+#### GraalVM snap
 :::{versionadded} 25.04
 :::
 
 GraalVM Community Edition for JDK versions 21, 24 and 25 is now available as a [snap](https://snapcraft.io/graalvm-jdk). Java developers now have a choice to build and deploy their applications with standard OpenJDK, with OpenJDK-CRaC or as a GraalVM native image.
 
 
-:::{rubric} .NET 10
-:::
+#### .NET 10
 
 .NET has been updated from version 8 to 10.
 
 We have also expanded .NET support to the IBM Power platform, further broadening the platform’s reach.
 
-:::{rubric} .NET snap
-:::
+#### .NET snap
 :::{versionadded} 24.10
 :::
 
 We are excited to introduce the new and improved [.NET Snap](https://snapcraft.io/dotnet), allowing developers to seamlessly install any supported version of .NET on any Ubuntu system.
 
-:::{rubric} PowerShell snap on more architectures
-:::
+#### PowerShell snap on more architectures
 :::{versionadded} 25.10
 :::
 
@@ -262,8 +244,7 @@ Support for the PowerShell snap has been expanded to include the `arm64`, `s390x
 
 ### Enterprise
 
-:::{rubric} Updated `authd`
-:::
+#### Updated `authd`
 
 [authd](https://github.com/ubuntu/authd), Ubuntu's cloud authentication solution, has been updated:
 
@@ -273,13 +254,11 @@ Support for the PowerShell snap has been expanded to include the `arm64`, `s390x
 - authctl is a new command line tool to manage authd
 - Many improvements and important bug fixes such as UID/GID handling 
 
-:::{rubric} New `authd` documentation
-:::
+#### New `authd` documentation
 
 New [authd documentation](https://documentation.ubuntu.com/authd/en/stable/) has been published.
 
-:::{rubric} Updated ADSys
-:::
+#### Updated ADSys
 
 The Active Directory Group Policy client for Ubuntu supports the latest Polkit and comes with improvements and bug fixes to certificates enrollment.
 
@@ -289,8 +268,7 @@ The Active Directory Group Policy client for Ubuntu supports the latest Polkit a
 
 ### Security
 
-:::{rubric} New AppArmor sandboxing profiles
-:::
+#### New AppArmor sandboxing profiles
 :::{versionadded} 25.04
 :::
 
@@ -300,8 +278,7 @@ As part of a profile writing effort to improve overall system security, the AppA
 These profiles may cause breakage for unanticipated uses of those applications, and we encourage users to file a bug on [Launchpad](https://bugs.launchpad.net/ubuntu/+source/apparmor/+filebug) for AppArmor-induced breakage in common use cases. When AppArmor denies an action, it usually generates a log entry describing the denial, which will help us investigate the bug, but which can also be used to add additional rules for customization or to work around the denials. AppArmor log entries can be read in the auditd logs, if auditd is installed, or in the syslog otherwise. [This page](https://gitlab.com/apparmor/apparmor/-/wikis/denial_quick_guide) describes how the information contained in the denial log can be used to update a local override.
 :::
 
-:::{rubric} TPM-backed full-disk encryption
-:::
+#### TPM-backed full-disk encryption
 :::{versionadded} 25.10
 :::
 
@@ -315,8 +292,7 @@ For details, see [Hardware-backed disk encryption](https://documentation.ubuntu.
 
 ### Hardware support
 
-:::{rubric} NVIDIA Dynamic Boost
-:::
+#### NVIDIA Dynamic Boost
 :::{versionadded} 25.04
 :::
 
@@ -328,36 +304,33 @@ Dynamic Boost will be active only when the laptop is powered by AC and there is 
 
 For more details refer to [NVIDIA's documentation](https://download.nvidia.com/XFree86/Linux-x86_64/570.133.07/README/dynamicboost.html).
 
-:::{rubric} Support for new Intel® integrated and discrete GPUS
-:::
+#### Support for new Intel® integrated and discrete GPUS
 :::{versionadded} 25.04
 :::
 
 This release brings full support for Intel® Core™ Ultra Xe2 integrated Intel® Arc™ graphics, and Intel® Arc™ B580 and B570 “Battlemage” discrete GPUs. 
 Moreover, the following features are also included:
- * Improved GPU and CPU ray tracing rendering performance in applications with Intel Embree support, such as Blender (v4.2+). Ray tracing hardware acceleration on the GPU improves frame rendering by 20-30%, due to a 2-4x speed-up for the ray tracing component. 
- * Full hardware accelerated video encoding of AVC, JPEG, HEVC, and AV1 on “Battlemage” devices.
- * Introduction of the new CCS optimization in Intel® Compute Runtime.
- * Enable debugging support for Intel Xe GPUs. 
- * oneAPI Level Zero Ray Tracing improves AI/ML workload speeds via Embree on SYCL
- 
- :::{rubric} Suspend with Nvidia
- :::
- :::{versionadded} 25.10
- :::
- 
- Suspend-resume support is now enabled in the proprietary Nvidia driver so as to prevent corruption and freezes when waking an Nvidia desktop.
 
-:::{rubric} ARM desktop platforms
+* Improved GPU and CPU ray tracing rendering performance in applications with Intel Embree support, such as Blender (v4.2+). Ray tracing hardware acceleration on the GPU improves frame rendering by 20-30%, due to a 2-4x speed-up for the ray tracing component. 
+* Full hardware accelerated video encoding of AVC, JPEG, HEVC, and AV1 on “Battlemage” devices.
+* Introduction of the new CCS optimization in Intel® Compute Runtime.
+* Enable debugging support for Intel Xe GPUs. 
+* oneAPI Level Zero Ray Tracing improves AI/ML workload speeds via Embree on SYCL
+ 
+#### Suspend with Nvidia
+:::{versionadded} 25.10
 :::
+ 
+Suspend-resume support is now enabled in the proprietary Nvidia driver so as to prevent corruption and freezes when waking an Nvidia desktop.
+
+#### ARM desktop platforms
 :::{versionadded} 25.10
 :::
 
 The `linux-generic` kernel for ARM64 provides broader compatibility for ARM64 desktop platforms that utilize UEFI for booting ([LP#2121352](https://bugs.launchpad.net/ubuntu/+source/linux-signed/+bug/2121352)).
 
 
-:::{rubric} New RISC requirements
-:::
+#### New RISC requirements
 :::{versionchanged} 25.10
 :::
 
@@ -366,8 +339,7 @@ The Ubuntu RISC-V kernel (`linux-riscv`) only supports hardware that implements 
 
 ### Common changes
 
-:::{rubric} `sudo-rs`
-:::
+#### `sudo-rs`
 :::{versionadded} 25.10
 :::
 
@@ -378,8 +350,7 @@ The `sudo` tool (the original `sudo` maintained by Todd C. Miller) has been rena
 See [Ubuntu Server Docs](https://documentation.ubuntu.com/server/how-to/security/user-management/#sudo-rs) for configuring your default `sudo` provider and for the differences between `sudo-rs` and `sudo.ws`.
     
 
-:::{rubric} `rust-coreutils`
-:::
+#### `rust-coreutils`
 :::{versionadded} 25.10
 :::
 
@@ -388,8 +359,7 @@ The core utilities of the operating system are now provided by the [`rust-coreut
 Since `rust-coreutils` are not necessarily fully compatible yet, we continue to provide the classic GNU utilities as well. You can switch back and forth between them.
     
 
-:::{rubric} Linux kernel 7.0
-:::
+#### Linux kernel 7.0
 
 The Linux kernel has been updated from version 6.8 to 7.0.
 
@@ -408,8 +378,7 @@ The Linux kernel has been updated from version 6.8 to 7.0.
     :::{versionadded} 25.04
     :::
 
-:::{rubric} `systemd` 259
-:::
+#### `systemd` 259
 
 The `systemd` service manager has been updated from version 255 to 259.
 
@@ -428,8 +397,7 @@ The `systemd` service manager has been updated from version 255 to 259.
     :::{versionchanged} 24.10
     :::
 
-:::{rubric} Netplan 1.2
-:::
+#### Netplan 1.2
 
 The Netplan network manager has been updated from version 1.0 to 1.2.
 
@@ -453,8 +421,7 @@ The Netplan network manager has been updated from version 1.0 to 1.2.
     :::{versionadded} 25.10
     :::
 
-:::{rubric} Package Management: APT 3
-:::
+#### Package Management: APT 3
 
 APT has been updated from version 2.7 to 3.1.
 
@@ -466,8 +433,7 @@ An automatic pager has been added to `apt(8)` for commands such as show and list
 
 The `apt-key` command has been removed. Signature verification now makes direct use of `gpgv`. Some packages and system administration scripts may need adjustment for managing keys directly, advice can be found in the `apt-secure(8)` manual page.
 
-:::{rubric} Dracut
-:::
+#### Dracut
 :::{versionchanged} 25.10
 :::
 
