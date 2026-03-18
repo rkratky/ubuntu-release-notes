@@ -442,9 +442,21 @@ The `oracledb` and `zabbixagent` agents were replaced by the `oracle` and `zabbi
 ### Security changes
 
 ### Hardware support changes
+-->
 
 ### Common changes
--->
+
+#### Removable media are mounted under `/run/media`
+
+In previous Ubuntu releases, removable media were mounted under the `/media` directory. Starting with Ubuntu 26.04 LTS, `/run/media` is now the mount directory instead. This has several benefits:
+
+- Better support for read-only root file systems
+- Better alignment with other distributions and upstream defaults
+- Not requiring special cleanup routines because `/run` is hosted on a virtual memory file system (`tmpfs`)
+
+If you rely on the specific directory path for media access, check that your setup still works. For example, test your existing scripts.
+
+[LP#2130110](https://bugs.launchpad.net/ubuntu/+source/udisks2/+bug/2130110)
 
 ## Deprecated features
 
