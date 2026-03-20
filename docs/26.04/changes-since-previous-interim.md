@@ -19,6 +19,16 @@ Ubuntu 26.04 LTS is currently in development, scheduled to be released in April 
 
 The GNOME desktop environment has been updated to version 50.
 
+#### Added graphical Ubuntu Insights management controls to Settings
+
+Graphical controls to finely control Ubuntu Insights consent states as well as to preview reports have been added to Settings. They can be found under *Privacy & Securit* within the *Telemetry* panel, which also replaces the *Diagnostics* panel.
+
+#### Prompt for Ubuntu Insights consent on release upgrades
+
+After a release upgrade, you'll be prompted for consent to collect system information via Ubuntu Insights. This prompt only appears if Ubuntu Insights consent isn't already set or if it's deemed necessary to re-prompt due to any other reason.
+
+This change is part of creating a new release upgrade mode for GNOME Initial Setup.
+
 ### Server features
 
 #### Chrony 4.8
@@ -383,6 +393,12 @@ If the previous behavior is preferred, password feedback can be disabled using t
 
 1. Edit sudoers using `sudo visudo` in the terminal
 2. Add the option `Defaults !pwfeedback` to the configuration file
+
+#### Ubuntu Insights integration with the release upgrader
+
+When Ubuntu Insights is available and configured, the release upgrader will now use Ubuntu Insights at the end of a release upgrade to generate a report based on the existing consent state. Note, this change does not prevent the Ubuntu Report-based collection that may be triggered by a release upgrade.
+
+This change only affects Desktop and WSL since presently, these are the only platforms that include Ubuntu Insights.
 
 #### Package Management: APT 3.0
 
