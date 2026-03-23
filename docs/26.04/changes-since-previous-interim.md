@@ -431,9 +431,17 @@ Finally several packages were updated to their latest upstream version to pick u
 
 * `cgroupfs` is now mounted with `nsdelegate,memory_recursiveprot,memory_hugetlb_accounting`
 
-#### systemd v257.4
+#### systemd v259.5
 
-...
+For a complete list of changes, please see the [v259 changelog](https://github.com/systemd/systemd/releases/tag/v259). Below are some important highlights:
+
+* systemd v259 **no longer supports cgroup v1 ('legacy' and 'hybrid') hierachies**. This means that:
+  * Ubuntu installations running cgroup v1 will not be allowed to upgrade to Ubuntu 26.04 LTS.
+  * Ubuntu 26.04 LTS container workloads will not run on a host booted with cgroup v1.
+  * Ubuntu 26.04 LTS hosts do not support container workloads that require cgroup v1 (for example, Ubuntu < 18.04 LTS).
+  * This change was made in systemd v258. See the [v258 changelog](https://github.com/systemd/systemd/releases/tag/v259) for more information.
+* Ubuntu 26.04 LTS is the **last release that support will System V service scripts compatibility in systemd**.
+  * systemd [v260 has already dropped support](https://github.com/systemd/systemd/releases/tag/v260), so this change will take effect in Ubuntu 26.10.
 
 #### Netplan v1.1.2 🌐
 
