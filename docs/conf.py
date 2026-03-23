@@ -128,6 +128,18 @@ html_context = {
 
     # Required for feedback button
     'github_issues': 'enabled',
+
+    # Links for the "Ubuntu docs" dropdown in the site header
+    #  - comment out "your" docs set, duh! ;-)
+    "ubuntu_docs": [
+        # {"title": "Ubuntu release notes", "url": "https://documentation.ubuntu.com/release-notes/"},
+        {"title": "Ubuntu Desktop",        "url": "https://documentation.ubuntu.com/desktop/"},
+        {"title": "Ubuntu Server",         "url": "https://ubuntu.com/server/docs/"},
+        {"title": "Ubuntu on WSL",         "url": "https://documentation.ubuntu.com/wsl/latest/"},
+        {"title": "Ubuntu for developers", "url": "https://documentation.ubuntu.com/ubuntu-for-developers/"},
+        {"title": "Ubuntu project",        "url": "https://documentation.ubuntu.com/project/"},
+        {"title": "Ubuntu Pro",            "url": "https://documentation.ubuntu.com/pro/"},
+    ],
 }
 
 html_extra_path = []
@@ -187,7 +199,7 @@ sitemap_excludes = [
 #######################
 
 #html_static_path = ["_static"]
-#templates_path = ["_templates"]
+templates_path = [".sphinx/_templates"]
 
 
 #############
