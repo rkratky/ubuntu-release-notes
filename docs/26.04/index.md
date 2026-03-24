@@ -470,6 +470,63 @@ Suspend-resume support is now enabled in the proprietary Nvidia driver so as to 
 
 The `linux-generic` kernel for ARM64 provides broader compatibility for ARM64 desktop platforms that utilize UEFI for booting ([LP#2121352](https://bugs.launchpad.net/ubuntu/+source/linux-signed/+bug/2121352)).
 
+#### A new boot layout for Raspberry Pi
+:::{versionadded} 25.10
+:::
+
+A new layout of the boot partition is introduced to enhance the reliability of the boot process ([LP: #2116266](https://launchpad.net/bugs/2116266)). This will automatically "test" new boot assets written to the boot partition before committing them as the current "known good" set. See the [call for testing](https://discourse.ubuntu.com/t/call-for-testing-a-b-boot-on-raspberry-pi/64173) for more information, or [the blog post](https://waldorf.waveform.org.uk/2025/pull-yourself-up-by-your-bootstraps.html) covering the feature for the full details (including advice on how to opt-out of this feature, where required). The {manpage}`piboot-try(1)` man-page may also be consulted for advanced operations.
+
+:::{warning}
+Please note that, due to the new boot process, the boot firmware on your Pi *must* be up to date.
+
+For Pi 3, 3+, and Zero 2W
+: No action required, the boot firmware is in the image itself.
+
+For Pi 4
+: Your boot firmware *must* be dated no earlier than **2022-11-25**. To check, run `sudo rpi-eeprom-update`. If your firmware is dated earlier, using Ubuntu 24.04 (noble) or later, run `sudo rpi-eeprom-update -a` and reboot.
+
+For Pi 5
+: No action required, all firmware since release of the platform are compatible.
+:::
+
+#### Raspberry Pi is based on the minimal image
+:::{versionchanged} 25.10
+:::
+
+The Ubuntu desktop images for Raspberry Pi are now based upon the `desktop-minimal` seed rather than `desktop` ([LP: #2103808](https://launchpad.net/bugs/2103808)). This greatly reduces the default set of applications installed on the images (saving approximately 777MB of space on the uncompressed image, and thus on user's systems).
+
+:::{dropdown} The list of applications removed from the image
+
+  - `deja-dup` (backup service)
+  - `file-roller` (archive handler)
+  - `gnome-calendar`
+  - `gnome-snapshot` (camera application)
+  - `libreoffice-*`
+  - `remmina` (remote desktop client)
+  - `rhythmbox` (music player)
+  - `shotwell` (photo catalogue)
+  - `simple-scan` (flat-bed scanner application)
+  - `thunderbird` (email client)
+  - `totem` (video player)
+  - `transmission-gtk` (bittorrent client)
+:::
+
+The applications mentioned above will *not* be automatically removed for upgraders as the `ubuntu-desktop` meta-package remains manually installed in this circumstance. If you wish to remove these applications (in bulk), you may do so with:
+
+```{terminal}
+:user:
+:host:
+:dir:
+sudo apt purge ubuntu-desktop --autoremove
+```
+
+If you wish to keep specific applications, simply "install" them with `apt` first. This marks them as "manually installed", excluding them from automatic removal.
+
+#### Swap is created with `cloud-init` on Raspberry Pi
+:::{versionchanged} 25.10
+:::
+
+The creation of the swap file on the desktop images is now handled by [`cloud-init`](https://cloudinit.readthedocs.io/en/latest/) ([LP: #2116275](https://launchpad.net/bugs/2116275)). You may customize the size of the swap file by editing `user-data` on the boot partition prior to first boot (commented examples are included in the image).
 
 #### New RISC requirements
 :::{versionchanged} 25.10

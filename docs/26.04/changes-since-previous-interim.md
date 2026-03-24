@@ -790,23 +790,18 @@ PMDK sees some hardware-specific failures in its test suite, which may make the 
 
 #### Raspberry Pi
 
-* The new gnome-initial-setup has some teething issues:
+* The new `gnome-initial-setup` has issues preventing it from working properly:
+  - The selected key layout does not persist ([LP: #2127782](https://launchpad.net/bugs/2127782))
+  - Time zone input dropdown can "wobble" ([LP: #2084611](https://launchpad.net/bugs/2084611))
+  - The hostname change is mandatory ([LP: #2093132](https://launchpad.net/bugs/2093132))
 
-  * Time zone input dropdown can “wobble” ([LP: #2084611](https://launchpad.net/bugs/2084611))
-  * The localization of the application fails ([LP: #2104148](https://launchpad.net/bugs/2104148))
-  * The hostname change is mandatory ([LP: #2093132](https://launchpad.net/bugs/2093132))
+* During boot on the server image, if your `cloud-init` configuration (in `user-data` on the boot partition) relies upon networking (importing SSH keys, installing packages, etc.) you *must* ensure that at least one network interface is required (`optional: false`) in `network-config` on the boot partition. This is due to Netplan changes to the `wait-online` service (~~[LP: #2060311](https://launchpad.net/bugs/2060311)~~). Furthermore, a current issue may cause `cloud-init` to run before the network is ready ([LP: #2144891](https://launchpad.net/bugs/2144891))
 
-* During boot on the server image, if your `cloud-init` configuration (in `user-data` on the boot partition) relies upon networking (importing SSH keys, installing packages, etc.) you *must* ensure that at least one network interface is required (`optional: false`) in `network-config` on the boot partition. This is due to netplan changes to the wait-online service (~~[LP: #2060311](https://launchpad.net/bugs/2060311)~~)
+* With the removal of the `crda` package in 22.04, the method of setting the WiFi regulatory domain (editing `/etc/default/crda`) no longer operates. On server images, use the `regulatory-domain` option in the Netplan configuration. On desktop images, append `cfg80211.ieee80211_regdom=GB` (substituting `GB` for the relevant country code) to the kernel command line in the `cmdline.txt` file on the boot partition  ([LP: #1951586](https://launchpad.net/bugs/1951586)).
 
-* The seeded totem video player will not prompt users to install missing codecs when attempting to play a video requiring them ([LP: #2060730](https://launchpad.net/bugs/2060730))
+* Colors appear incorrectly in the Ubuntu App Center ([LP: #2076919](https://launchpad.net/bugs/2076919))
 
-* With the removal of the `crda` package in 22.04, the method of setting the wifi regulatory domain (editing `/etc/default/crda`) no longer operates. On server images, use the `regulatory-domain` option in the Netplan configuration. On desktop images, append `cfg80211.ieee80211_regdom=GB` (substituting `GB` for the relevant country code) to the kernel command line in the `cmdline.txt` file on the boot partition  ([LP: #1951586](https://launchpad.net/bugs/1951586)).
-
-* The power LED on the Raspberry Pi 2B, 3B, 3A+, 3B+, and Zero 2W currently goes off and stays off once the Ubuntu kernel starts booting ([LP: #2060942](https://launchpad.net/bugs/2060942))
-
-* Colours appear incorrectly in the Ubuntu App Centre ([LP: #2076919](https://launchpad.net/bugs/2076919))
-
-* On server images, re-authentication to WiFi APs when regulatory domain is set result in dmesg spam to the console ([LP: #2063365](https://launchpad.net/bugs/2063365))
+* On server images, re-authentication to WiFi APs when regulatory domain is set result in `dmesg` spam to the console ([LP: #2063365](https://launchpad.net/bugs/2063365))
 
 ### Common issues
 
