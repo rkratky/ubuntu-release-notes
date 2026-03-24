@@ -649,3 +649,13 @@ Ubuntu now uses Dracut as its default initial ramdisk infrastructure, replacing 
 The original `initramfs-tools` remains supported and you can switch between the two implementations if required.
 
 For details about the switch, see [the specification](https://discourse.ubuntu.com/t/spec-switch-to-dracut/54776).
+
+
+## More details
+
+For a complete list of changes in Ubuntu 26.04 LTS, refer to the following documents, depending on the Ubuntu release that you're upgrading from:
+
+- {ref}`ubuntu-24.10-release-notes`
+- {ref}`ubuntu-25.04-release-notes`
+- {ref}`ubuntu-25.10-release-notes`
+- {ref}`ubuntu-26.04-lts-changes-since-25.10`
