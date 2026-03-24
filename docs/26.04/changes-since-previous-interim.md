@@ -95,6 +95,12 @@ SoS was updated to 4.10.2. This upgrade introduces new plugins and also adds new
 
 For more information see the [4.10.1](https://github.com/sosreport/sos/releases/tag/4.10.1) and [4.10.2](https://github.com/sosreport/sos/releases/tag/4.10.2) upstream release notes.
 
+#### Colored output with `strace` 6.19
+
+[`strace`](https://strace.io/) now supports colored output (configurable with `--color=...`, `STRACE_COLORS=...` and `NO_COLOR=1`).
+
+![Sample colored output](/images/strace-color.png)
+
 ### Container features
 
 #### Container stacks
