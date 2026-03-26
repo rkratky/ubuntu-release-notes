@@ -316,7 +316,7 @@ HAProxy was updated to the latest upstream LTS release, 3.2, which introduces pe
 
 #### OpenJDK
 
-OpenJDK 25 package is the default and is TCK (Technology Compatibility Kit) certified on AMD64, ARM64, s390x, ppc64el and armhf. The Java TCK is the most comprehensive test suite that covers all aspects of Java SE specification including language features, libraries and APIs. This guarantees interoperability and conformance to standard.
+OpenJDK 25 package is the default and is TCK (Technology Compatibility Kit) certified on AMD64, ARM64, S390X, PPC64EL. The Java TCK is the most comprehensive test suite that covers all aspects of Java SE specification including language features, libraries and APIs. This guarantees interoperability and conformance to standard.
 
 #### .NET
 

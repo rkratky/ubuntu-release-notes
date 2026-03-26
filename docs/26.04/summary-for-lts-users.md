@@ -313,13 +313,13 @@ You can learn more at [Announcing HAProxy 3.0](https://www.haproxy.com/blog/anno
 :::{versionadded} 25.10
 :::
 
-OpenJDK 25 package is available and is TCK (Technology Compatibility Kit) certified on AMD64, ARM64, s390x, ppc64el and armhf. The Java TCK is the most comprehensive test suite that covers all aspects of Java SE specification including language features, libraries and APIs. This guarantees interoperability and conformance to standard.
+OpenJDK 25 package is available and is TCK (Technology Compatibility Kit) certified on AAMD64, ARM64, S390X, PPC64EL. The Java TCK is the most comprehensive test suite that covers all aspects of Java SE specification including language features, libraries and APIs. This guarantees interoperability and conformance to standard.
 
 ### OpenJDK 21 and TCK certification
 :::{versionadded} 24.10
 :::
 
-OpenJDK 21 and OpenJDK 17 packages are now TCK (Technology Compatibility Kit) certified on AMD64, ARM64, s390x, ppc64el and armhf. The Java TCK is the most comprehensive test suite that covers all aspects of Java SE specification including language features, libraries and APIs. This guarantees interoperability and conformance to standard.
+OpenJDK 21 and OpenJDK 17 packages are now TCK (Technology Compatibility Kit) certified on AMD64, ARM64, s390x, ppc64el. The Java TCK is the most comprehensive test suite that covers all aspects of Java SE specification including language features, libraries and APIs. This guarantees interoperability and conformance to standard.
 
 ### Spring® snaps
 :::{versionadded} 25.04
