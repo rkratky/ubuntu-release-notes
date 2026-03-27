@@ -92,12 +92,12 @@ New features and important changes in 4.23:
 (26.04-sssd-2.12)=
 #### SSSD
 
-```{include} /reuse/26.04/sssd-2.12.md
+```{include} /reuse/26.04/sssd-2.12.txt
 ```
 
 ### Squid
 
-```{include} /reuse/26.04/squid-7.2.md
+```{include} /reuse/26.04/squid-7.2.txt
 ```
 
 #### SoS (`sosreport`)
@@ -108,7 +108,7 @@ For more information see the [4.10.1](https://github.com/sosreport/sos/releases/
 
 #### Colored output with `strace` 6.19
 
-```{include} /reuse/26.04/strace-6.19.md
+```{include} /reuse/26.04/strace-6.19.txt
 ```
 
 ### Container features

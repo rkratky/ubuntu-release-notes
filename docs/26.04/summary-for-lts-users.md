@@ -247,17 +247,17 @@ See [LP: #2101838](https://bugs.launchpad.net/ubuntu/+source/samba/+bug/2101838)
 
 ### Squid
 
-```{include} /reuse/26.04/squid-7.2.md
+```{include} /reuse/26.04/squid-7.2.txt
 ```
 
 ### SSSD
 
-```{include} /reuse/26.04/sssd-2.12.md
+```{include} /reuse/26.04/sssd-2.12.txt
 ```
 
 #### Colored output with `strace` 6.19
 
-```{include} /reuse/26.04/strace-6.19.md
+```{include} /reuse/26.04/strace-6.19.txt
 ```
 
 ### HAProxy
