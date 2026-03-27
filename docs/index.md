@@ -38,6 +38,13 @@ Future releases <future>
 Older releases <archive>
 :::
 
+:::{toctree}
+:hidden:
+:maxdepth: 2
+
+Contribute to release notes <contribute>
+:::
+
 ## LTS releases
 
 <!--
