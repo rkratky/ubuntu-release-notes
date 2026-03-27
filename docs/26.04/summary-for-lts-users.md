@@ -495,11 +495,13 @@ If you wish to keep specific applications, simply "install" them with `apt` firs
 
 The creation of the swap file on the desktop images is now handled by [`cloud-init`](https://cloudinit.readthedocs.io/en/latest/) ([LP: #2116275](https://launchpad.net/bugs/2116275)). You may customize the size of the swap file by editing `user-data` on the boot partition prior to first boot (commented examples are included in the image).
 
-### New RISC requirements
+#### New RISC-V requirements
 :::{versionchanged} 25.10
 :::
 
-The Ubuntu RISC-V kernel (`linux-riscv`) only supports hardware that implements the RVA23S64 ISA profile. You can't run Ubuntu 26.04 LTS on systems that don't satisfy this requirement. The RISC-V kernel in Ubuntu 24.04 LTS continues to support boards with RVA20 processor cores.
+The RISC-V version of Ubuntu 26.04 LTS only supports hardware that implements the RVA23S64 ISA profile. You can't run Ubuntu 26.04 LTS on systems that don't satisfy this requirement. Ubuntu 24.04 LTS continues to support boards with the earlier RVA20 processor cores.
+
+As of April 2026, no RVA23S64 hardware is available yet. The only supported RISC-V platform is the QEMU virtualization with the `-cpu rva23s64` CPU profile.
 
 ### IBM Z requirements raised to z15
 :::{versionchanged} 26.04
