@@ -288,15 +288,20 @@ You can learn more at [Announcing HAProxy 3.0](https://www.haproxy.com/blog/anno
 * Rust 🦀 toolchain has been updated from version 1.75 to 1.88.
 * Golang 🐀 has been updated from version 1.22 to 1.25.
 * Zig ⚡ is now available in Ubuntu. It defaults to version 0.14.1.
+* OpenJDK has been updated from version 21 to 25, while LTS versions 8, 11, 17, 21 are also available. OpenJDK 26, and OpenJDK 27 previews are also included.
 * Ubuntu Toolchains has a new [homepage](https://ubuntu.com/toolchains).
+
+### OpenJDK 25 and TCK certification
+:::{versionadded} 25.10
+:::
+
+OpenJDK 25 package is available and is TCK (Technology Compatibility Kit) certified on AMD64, ARM64, S390X, PPC64EL. The Java TCK is the most comprehensive test suite that covers all aspects of Java SE specification including language features, libraries and APIs. This guarantees interoperability and conformance to standard.
 
 ### OpenJDK 21 and TCK certification
 :::{versionadded} 24.10
 :::
 
-OpenJDK defaults to 21 (LTS), while version 25 (LTS) and an early access snapshot of version 26 are now available.
-
-OpenJDK 21 and OpenJDK 17 packages are now TCK (Technology Compatibility Kit) certified on AMD64, ARM64, s390x, ppc64el and armhf. The Java TCK is the most comprehensive test suite that covers all aspects of Java SE specification including language features, libraries and APIs. This guarantees interoperability and conformance to standard.
+OpenJDK 21 and OpenJDK 17 packages are now TCK (Technology Compatibility Kit) certified on AMD64, ARM64, s390x, ppc64el. The Java TCK is the most comprehensive test suite that covers all aspects of Java SE specification including language features, libraries and APIs. This guarantees interoperability and conformance to standard.
 
 ### Spring® snaps
 :::{versionadded} 25.04
@@ -477,11 +482,13 @@ If you wish to keep specific applications, simply "install" them with `apt` firs
 
 The creation of the swap file on the desktop images is now handled by [`cloud-init`](https://cloudinit.readthedocs.io/en/latest/) ([LP: #2116275](https://launchpad.net/bugs/2116275)). You may customize the size of the swap file by editing `user-data` on the boot partition prior to first boot (commented examples are included in the image).
 
-### New RISC requirements
+#### New RISC-V requirements
 :::{versionchanged} 25.10
 :::
 
-The Ubuntu RISC-V kernel (`linux-riscv`) only supports hardware that implements the RVA23S64 ISA profile. You can't run Ubuntu 26.04 LTS on systems that don't satisfy this requirement. The RISC-V kernel in Ubuntu 24.04 LTS continues to support boards with RVA20 processor cores.
+The RISC-V version of Ubuntu 26.04 LTS only supports hardware that implements the RVA23S64 ISA profile. You can't run Ubuntu 26.04 LTS on systems that don't satisfy this requirement. Ubuntu 24.04 LTS continues to support boards with the earlier RVA20 processor cores.
+
+As of April 2026, no RVA23S64 hardware is available yet. The only supported RISC-V platform is the QEMU virtualization with the `-cpu rva23s64` CPU profile.
 
 ### IBM Z requirements raised to z15
 :::{versionchanged} 26.04
