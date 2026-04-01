@@ -212,7 +212,7 @@ Other notable new features:
 
   * Add `riscv64` to `FirmwareArchitecture`
 
-  * Update OpenSBI to v1.7
+  * Update OpenSBI to v1.8.1
 
   * Implement MonitorDef HMP API
 

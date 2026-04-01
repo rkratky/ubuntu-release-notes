@@ -482,7 +482,7 @@ If you wish to keep specific applications, simply "install" them with `apt` firs
 
 The creation of the swap file on the desktop images is now handled by [`cloud-init`](https://cloudinit.readthedocs.io/en/latest/) ([LP: #2116275](https://launchpad.net/bugs/2116275)). You may customize the size of the swap file by editing `user-data` on the boot partition prior to first boot (commented examples are included in the image).
 
-#### New RISC-V requirements
+### New RISC-V requirements
 :::{versionchanged} 25.10
 :::
 
