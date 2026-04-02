@@ -219,9 +219,9 @@ For more information see the [4.10.1](https://github.com/sosreport/sos/releases/
 
 For the `containerd` and `runc` packages, we established a pattern to either keep the regular updates to the latest version or to opt for slower, more stable updates throughout the time the release is active. For more please read [Ubuntu Server Gazette - Issue 8 - Containers: Steady paths for agile stacks](https://discourse.ubuntu.com/t/ubuntu-server-gazette-issue-8-containers-steady-paths-for-agile-stacks/68680).
 
-#### containerd 2.2.1
+#### containerd 2.2.2
 
-The `containerd` packages (`src:containerd-app`, `src:containerd-stable`) were updated to version 2.2.1. Version 2 includes the stabilization of new features added in the last 1.x release as well as the removal of features which were deprecated in 1.x, meaning you should expect breaking changes here.
+The `containerd` packages (`src:containerd-app`, `src:containerd-stable`) were updated to version 2.2.2 Version 2 includes the stabilization of new features added in the last 1.x release as well as the removal of features which were deprecated in 1.x, meaning you should expect breaking changes here.
 
 For further details on such changes, please refer to the `containerd` 2.0 [upstream release notes](https://github.com/containerd/containerd/blob/main/docs/containerd-2.0.md) and check the notes for [individual point releases](https://github.com/containerd/containerd/releases).
 
