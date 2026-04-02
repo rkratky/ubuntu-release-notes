@@ -352,9 +352,15 @@ For the `containerd` and `runc` packages, we established a pattern to either kee
 
 ### High availability and clustering
 
-* Starting with the Oracular release, the **kpartx-boot** package has been discontinued to align with Debian. Originally introduced to support dmraid booting, its functionality is preserved, as the kpartx package now includes everything previously provided by kpartx-boot.
+* The **`kpartx-boot`** package has been discontinued to align with Debian. Originally introduced to support `dmraid` booting, its functionality is preserved, as the `kpartx` package now includes everything previously provided by `kpartx-boot`.
 
-* The **dmraid** package has been removed from Oracular. The rationale for its removal is outlined in https://bugs.launchpad.net/bugs/2073677, primarily due to its removal from Debian unstable and minimal upstream support. If you require this functionality, consider using alternatives like mdadm.
+    :::{versionremoved} 24.10
+    :::
+
+* The **`dmraid`** package has been removed. The rationale for its removal is outlined in <https://bugs.launchpad.net/bugs/2073677>, primarily due to its removal from Debian unstable and minimal upstream support. If you require this functionality, consider using alternatives like `mdadm`.
+
+    :::{versionremoved} 24.10
+    :::
 
 * Pacemaker was updated to version 3. All new features and breaking changes are described in the [upstream release notes](https://projects.clusterlabs.org/w/projects/pacemaker/pacemaker_3.0_changes/).
 
