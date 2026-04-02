@@ -357,7 +357,7 @@ For the `containerd` and `runc` packages, we established a pattern to either kee
     :::{versionremoved} 24.10
     :::
 
-* The **`dmraid`** package has been removed. The rationale for its removal is outlined in <https://bugs.launchpad.net/bugs/2073677>, primarily due to its removal from Debian unstable and minimal upstream support. If you require this functionality, consider using alternatives like `mdadm`.
+* The **`dmraid`** package has been removed. The rationale for its removal is outlined in bug [LP#2073677](https://bugs.launchpad.net/bugs/2073677), primarily due to its removal from Debian unstable and minimal upstream support. If you require this functionality, consider using alternatives like `mdadm`.
 
     :::{versionremoved} 24.10
     :::
