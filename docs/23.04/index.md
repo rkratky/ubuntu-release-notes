@@ -2,24 +2,12 @@
 tocdepth: 3
 ---
 
+<!-- SOURCE: https://discourse.ubuntu.com/t/lunar-lobster-release-notes/31910 -->
+
 (ubuntu-23-04-release-notes)=
-# Ubuntu 23.04 "Lunar Lobster" Release Notes
+# Ubuntu 23.04 release notes
 
-<!-- Source: https://discourse.ubuntu.com/t/lunar-lobster-release-notes/31910 -->
-
-sil2100 | 2023-10-11 16:56:37 UTC | #1
-
-# Lunar Lobster Release Notes
-
-# Table of Contents
-
-- [Introduction](#heading--introduction)
-- [New features in 23.04](#heading--new-features-in-23-04)
-- [Known Issues](#heading--known-issues)
-- [Official flavours](#heading--official-flavours)
-- [More information](#heading--more-information)
-
-<h1 id="heading--introduction">Introduction</h1>
+## Introduction
 
 These release notes for **Ubuntu 23.04** (Lunar Lobster) provide an overview of the release and document the known issues with Ubuntu and its flavours.
 
@@ -27,11 +15,11 @@ These release notes for **Ubuntu 23.04** (Lunar Lobster) provide an overview of 
 
 Ubuntu 23.04 will be supported for 9 months until January 2024. If you need Long Term Support, it is recommended you use [Ubuntu 22.04 LTS](https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/) instead.
 
-<h1 id="heading--new-features-in-23-04">New features in 23.04</h1>
+## New features in 23.04
 
 ## Updated Packages
 
-## Linux kernel 🐧
+### Linux kernel 🐧
 
 Ubuntu 23.04 is shipped with the new 6.2 Linux kernel that brings many new features.
 
@@ -48,7 +36,7 @@ Notable [upstream](https://kernelnewbies.org/Linux_6.2) kernel features:
  - Miscellaneous BPF improvements 
  - New hardware support, various performance and security improvements
 
-## systemd v252.5
+### systemd v252.5
 
 The init system was updated to systemd v252.5. Please refer to the upstream [changelog ](https://github.com/systemd/systemd/releases/tag/v252) for more information about individual features.
 
@@ -422,7 +410,7 @@ Ubuntu Server 23.04 can be installed in an LPAR (classic or DPM systems), as IBM
   * Reset DAT-Protection facility support for z16 added [(bug 1982378)](https://bugs.launchpad.net/bugs/1234567)
   * and finally glibc patched to allow influencing hwcaps/stfle via GLIBC_TUNABLES glibc.cpu.hwcaps [(bug 2007599)](https://bugs.launchpad.net/bugs/1234567)
 
-<h1 id="heading--known-issues">Known Issues</h1>
+## Known Issues
 
 As is to be expected, with any release, there are some significant known bugs that users may run into with this release of Ubuntu. The ones we know about at this point (and some of the workarounds), are documented here so you don't need to spend time reporting these bugs again:
 
@@ -432,13 +420,13 @@ As is to be expected, with any release, there are some significant known bugs th
 
 * The Live Session of the new Ubuntu Desktop installer is not localized. It is still possible to perform a non-English installation using the new installer, but Internet access at install time is required to download the language packs. Should this be an issue use the legagy installer images. ([LP: #2013329](https://bugs.launchpad.net/ubuntu-release-notes/+bug/2013329))
 
-## Linux kernel
+### Linux kernel
 
 * There is a regression in support for SRIOV NVIDIA vGPU drivers compared to v5.15/v5.19 kernels. Canonical is working with NVIDIA to resolve this release regression in a future kernel SRU in Lunar. ([LP: #1988806](https://bugs.launchpad.net/bugs/1988806))
 * For some Broadcom devices the b43 kernel module will be loaded but unusable due to the PHY being unsupported. Steps for disabling the b43 module and using bcmwl are documented in the relevant bug report. ([LP: 2013236](https://bugs.launchpad.net/ubuntu/+source/ubuntu-drivers-common/+bug/2013236))
 * Network deployment is failing whilst exhibiting issues with udev & kernel unable to enumerate and load drivers in the initrd. This is being investigated in ([LP: #2016908](https://bugs.launchpad.net/maas-images/+bug/2016908))
 
-## Ubuntu Desktop
+### Ubuntu Desktop
 
 - The Screen Reader is unable to read many parts of GTK4 apps ([LP: #2015760](https://launchpad.net/bugs/2015760)). Please use Ubuntu 22.04 LTS if you depend on screen reader support.
 - The _Try Ubuntu_ environment is not translated with the new Desktop Installer ([LP: #2013329](https://launchpad.net/bugs/2013329))
@@ -448,7 +436,7 @@ As is to be expected, with any release, there are some significant known bugs th
 - When opening Firefox the first time after login to a Wayland session, you may be met by a black window. If so, just close Firefox and try again. This issue will be fixed as a stable release update soon after the 23.04 release.
 
 
-## Ubuntu Server
+### Ubuntu Server
 
 - In some situations, it is acceptable to proceed with an offline install when the mirror is inaccessible. In this scenario, it is advised to use:
 ```
@@ -487,7 +475,7 @@ None
 
 Nothing yet.
 
-<h1 id="heading--official-flavours">Official flavours</h1>
+## Official flavours
 
 The release notes for the official flavours can be found at the following links:
 
@@ -502,7 +490,7 @@ The release notes for the official flavours can be found at the following links:
   * [Ubuntu Kylin Release Notes](https://www.ubuntukylin.com/news/ubuntukylin2304-en.html)
   * [Ubuntu Cinnamon Release Notes](https://ubuntucinnamon.org/ubuntu-cinnamon-23-04-lunar-lobster-released/)
 
-<h1 id="heading--more-information">More information</h1>
+## More information
 
 ## Reporting bugs
 
@@ -534,12 +522,3 @@ You can find out more about Ubuntu on the [Ubuntu website](https://ubuntu.com).
 To sign up for future Ubuntu development announcements, please subscribe to Ubuntu's development announcement list at:
 
   * https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce
-
--------------------------
-
-sil2100 | 2022-10-28 05:39:59 UTC | #2
-
-
-
--------------------------
-
