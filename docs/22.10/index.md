@@ -2,16 +2,12 @@
 tocdepth: 3
 ---
 
+<!-- SOURCE: https://discourse.ubuntu.com/t/kinetic-kudu-release-notes/27976 -->
+
 (ubuntu-22-10-release-notes)=
-# Ubuntu 22.10 "Kinetic Kudu" Release Notes
+# Ubuntu 22.10 release notes
 
-<!-- Source: https://discourse.ubuntu.com/t/kinetic-kudu-release-notes/27976 -->
-
-sil2100 | 2023-04-26 12:57:23 UTC | #1
-
-# Kinetic Kudu Release Notes
-
-# Introduction
+## Introduction
 
 These release notes for **Ubuntu 22.10** (Kinetic Kudu) provide an overview of the release and document the known issues with Ubuntu and its flavours.
 
@@ -19,11 +15,11 @@ These release notes for **Ubuntu 22.10** (Kinetic Kudu) provide an overview of t
 
 Ubuntu 22.10 will be supported for 9 months until July 2023. If you need Long Term Support, it is recommended you use [Ubuntu 22.04 LTS](https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/) instead.
 
-# New features in 22.10
+## New features in 22.10
 
 ## Updated Packages
 
-## Linux kernel 🐧
+### Linux kernel 🐧
 
 Ubuntu 22.10 is shipped with the new 5.19 Linux kernel that brings the following (most relevant) features (in addition to many other new features, new drivers, improvements and fixes):
 
@@ -35,7 +31,7 @@ Ubuntu 22.10 is shipped with the new 5.19 Linux kernel that brings the following
 * Support for proactive reclaim in memory control groups.
 * Support for Intel® Trust Domain Extensions (TDX).
 
-## systemd v251.4
+### systemd v251.4
 
 The init system was updated to systemd v251.4. Please refer to the upstream [changelog](https://github.com/systemd/systemd/releases/tag/v251) for more information about individual features. 
 
@@ -146,7 +142,7 @@ This new version contains an important CVE fix and also a bunch of improvements,
 
 This new version contains fixes to avoid potential lock issues and update its dependencies internally. For more detailed information please check the [upstream changelog](https://docs.docker.com/release-notes/).
 
-##### qemu
+#### qemu
 
 Qemu was updated to version v7.0.0 which brings many major and minor improvements. Among others this version includes:
 
@@ -158,7 +154,7 @@ Qemu was updated to version v7.0.0 which brings many major and minor improvement
  * The `qemu-nbd` program has gained a new `--tls-hostname` parameter to allow TLS validation against a different hostname, such as when setting up TLS through a TCP tunnel, and now supports TLS over Unix sockets.
  * See the upstream [changelog for version 7.0](https://wiki.qemu.org/ChangeLog/7.0) for an overview of the many further improvements. These also contain a list of suggested alternatives for removed, deprecated and incompatible features.
 
-##### libvirt
+#### libvirt
 
 Tracking the releases of libvirt continuously version v8.6.0 is now provided in Ubuntu 22.10 which - among many other fixes, improvements and features - includes:
 
@@ -172,7 +168,7 @@ Tracking the releases of libvirt continuously version v8.6.0 is now provided in 
    * Add support for post-copy migration recovery.
  * See the [upstream changelogs](https://libvirt.org/news.html) for the many further improvements and fixes since version 8.0.0 that was in [Ubuntu 22.04](https://discourse.ubuntu.com/t/jammy-jellyfish-release-notes/24668).
 
-##### openvswitch
+#### openvswitch
 
 The new version 3.0.0 of openvswitch is in Ubuntu 22.10 and provides a general update including the following changes:
 
@@ -256,7 +252,7 @@ In addition zcryptctl comes now with support for control domains (([bug 1982759]
 
 * Eventually improvements in the area of RDMA/RoCE, with support for independent usage of secondary physical function (PF) of ConnectX-5/6 based RoCE adapters ([bug 1959542](https://bugs.launchpad.net/bugs/1959542)) was added and the enablement for MIO instructions, means usage of new PCI Load/Store instructions in rdma-core (([bug 1959543](https://bugs.launchpad.net/bugs/1959543)) and ([bug 1959544](https://bugs.launchpad.net/bugs/1959544))).
 
-# Known Issues
+## Known Issues
 
 As is to be expected, with any release, there are some significant known bugs that users may run into with this release of Ubuntu. The ones we know about at this point (and some of the workarounds), are documented here so you don't need to spend time reporting these bugs again:
 
@@ -266,15 +262,15 @@ The option to install using zfs as a file system and encryption has been disable
 
 The command-not-found indexes are out of date for some packages in the release pocket of the Ubuntu archive. This means that recommendations in the terminal with text like `Command 'kms-universal-planes' not found, but can be installed with:` may be incorrect. An example of this can be found in ([bug 1998001](https://bugs.launchpad.net/ubuntu/+source/command-not-found/+bug/1998001)). Unfortunately, this issue was found after the release of Kinetic and is not easily fixable.
 
-## Linux kernel
+### Linux kernel
 
 The dkms package is not currently able to sign kernel modules which it builds. This will affect fresh installations of systems with a Broadcom  wireless device and that use secure boot. An update to dkms is currently in the works and [a workaround is available](https://discourse.ubuntu.com/t/dkms-package-support-extra-drivers-does-not-work-in-ubuntu-22-10-install-media/31655).
 
-## Ubuntu Desktop
+### Ubuntu Desktop
 
 Nothing yet.
 
-## Ubuntu Server
+### Ubuntu Server
 
 Nothing yet.
 
@@ -306,7 +302,7 @@ Nothing yet.
 
 
 
-# Official flavours
+## Official flavours
 
 The release notes for the official flavours can be found at the following links:
 
@@ -318,7 +314,7 @@ The release notes for the official flavours can be found at the following links:
   * [Ubuntu Unity Release Notes](https://ubuntuunity.org/blog/ubuntu-unity-22.10/)
   * [Xubuntu Release Notes](https://wiki.xubuntu.org/releases/22.10/release-notes)
 
-# More information
+## More information
 
 ## Reporting bugs
 
@@ -337,18 +333,3 @@ You can find out more about Ubuntu on the [Ubuntu website](https://ubuntu.com).
 To sign up for future Ubuntu development announcements, please subscribe to Ubuntu's development announcement list at:
 
   * https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce
-
--------------------------
-
-sil2100 | 2022-04-25 13:30:15 UTC | #2
-
-
-
--------------------------
-
-bdmurray | 2022-10-28 13:20:11 UTC | #3
-
-
-
--------------------------
-
