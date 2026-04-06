@@ -2,16 +2,12 @@
 tocdepth: 3
 ---
 
+<!-- SOURCE: https://discourse.ubuntu.com/t/groovy-gorilla-release-notes/15533 -->
+
 (ubuntu-20-10-release-notes)=
-# Ubuntu 20.10 "Groovy Gorilla" Release Notes
+# Ubuntu 20.10 release notes
 
-<!-- Source: https://discourse.ubuntu.com/t/groovy-gorilla-release-notes/15533 -->
-
-Wimpress | 2021-01-20 22:29:04 UTC | #1
-
-# Groovy Gorilla Release Notes
-
-# Introduction
+## Introduction
 
 These release notes for **Ubuntu 20.10** (Groovy Gorilla) provide an overview of the release and document the known issues with Ubuntu and its flavours.
 
@@ -20,7 +16,7 @@ These release notes for **Ubuntu 20.10** (Groovy Gorilla) provide an overview of
 Ubuntu 20.10 will be supported for 9 months until July 2021. If you need Long Term Support, it is recommended you use [Ubuntu 20.04 LTS](https://wiki.ubuntu.com/FocalFossa/ReleaseNotes/) instead.
 
 <!--
-# Get Ubuntu 20.10
+## Get Ubuntu 20.10
 
 ## Download Ubuntu 20.10
 
@@ -65,11 +61,11 @@ There are no offline upgrade options for Ubuntu Desktop and Ubuntu Server. Pleas
 
 -->
 
-# New features in 20.10
+## New features in 20.10
 
 ## Updated Packages
 
-## Linux kernel 🐧
+### Linux kernel 🐧
 
 Ubuntu 20.10 includes the __5.8__ Linux kernel. This includes numerous updates and added support since the 5.4 Linux kernel released in Ubuntu 20.04 LTS. Some notable examples include:
 
@@ -214,25 +210,25 @@ IBM Z and LinuxONE / s390x-specific enhancements since 20.04 (partially not limi
  * Further s390x specific enhancements: vector enhancements in gcc ([LP: #1888653](https://bugs.launchpad.net/bugs/1888653)) and in binutils ([LP: #1889742](https://bugs.launchpad.net/bugs/1889742) and [LP: #1888654](https://bugs.launchpad.net/bugs/1888654)), CPU topology alignment ([LP: #1884782](https://bugs.launchpad.net/bugs/1884782)), OSA Express performance enhancements in qeth driver ([LP: #1853294](https://bugs.launchpad.net/bugs/1853294)) and SMC-R failover ([LP: #1853151](https://bugs.launchpad.net/bugs/1853151)) as well as SMC-D v2 toleration support ([LP: #1887942](https://bugs.launchpad.net/bugs/1887942)).
 
 
-# Known Issues
+## Known Issues
 
 As is to be expected, with any release, there are some significant known bugs that users may run into with this release of Ubuntu. The ones we know about at this point (and some of the workarounds), are documented here so you don't need to spend time reporting these bugs again:
 
-## General
+### General
 
 * [LP: #1899632](https://bugs.launchpad.net/ubuntu-cdimage/+bug/1899632) - It is no longer possible to use "Easy Install" with VMWare Player.
 
-## Linux kernel
+### Linux kernel
 
  * The latest NVIDIA 455 graphics drivers were not included on the initial release of groovy. These will be available as a stable release update (SRU) shortly after release. The NVIDIA 455 drivers are necessary for support of the GeForce RTX 3080, RTX 3090 and MX450.
 
-## Ubuntu Desktop
+### Ubuntu Desktop
 
  * [LP :#1900722](https://bugs.launchpad.net/ubuntu/+source/ubiquity/+bug/1900722) - Reinstall Ubuntu fails.
  * [LP: #1897224](https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1897224) - Graphical snaps broken on GNOME Wayland sessions
 * [LP: #1901043](https://bugs.launchpad.net/ubuntu-release-notes/+bug/1901043) - No sound in Try/Install Ubuntu (ubiquity-dm) when "Safe graphics mode" is selected (nomodeset)
 
-## Ubuntu Server
+### Ubuntu Server
 
 Nothing yet.
 
@@ -267,7 +263,7 @@ Nothing yet.
 
  * [LP: #1900900](https://bugs.launchpad.net/bugs/1900900) - If doing an installation on previously used zFCP/SCSI multipath disk storage, the installer might fail removing a previous configuration. Workaround is to wipe the config manually in an installer shell. Fix will be included in future installer updates.
 
-# Official flavours
+## Official flavours
 
 The release notes for the official flavours can be found at the following links:
 
@@ -275,11 +271,11 @@ The release notes for the official flavours can be found at the following links:
   * [Lubuntu Release Notes](https://lubuntu.me)
   * [Ubuntu Budgie Release Notes](https://ubuntubudgie.org/2020/09/ubuntu-budgie-20-10-release-notes/)
   * [Ubuntu Kylin Release Notes](https://www.ubuntukylin.com/news/2010ReleaseNotes-en.html)
-  * [Ubuntu MATE Release Notes](/blog/ubuntu-mate-groovy-gorilla-release-notes/)
+  * [Ubuntu MATE Release Notes](https://ubuntu-mate.org/blog/ubuntu-mate-groovy-gorilla-release-notes/)
   * [Ubuntu Studio Release Notes](https://wiki.ubuntu.com/GroovyGorilla/ReleaseNotes/UbuntuStudio)
   * [Xubuntu Release Notes](https://wiki.xubuntu.org/releases/20.10/release-notes)
 
-# More information
+## More information
 
 ## Reporting bugs
 
@@ -298,12 +294,3 @@ You can find out more about Ubuntu on the [Ubuntu website](https://www.ubuntu.co
 To sign up for future Ubuntu development announcements, please subscribe to Ubuntu's development announcement list at:
 
   * https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce
-
--------------------------
-
-bdmurray | 2023-04-20 14:50:46 UTC | #2
-
-
-
--------------------------
-
