@@ -2,9 +2,9 @@
 tocdepth: 3
 ---
 
-(ubuntu-7-10-release-notes)=
-# Ubuntu 7.10 "Gutsy Gibbon" Release Notes
+<!-- SOURCE: https://wiki.ubuntu.com/GutsyReleaseNotes -->
 
-<!-- Source: https://wiki.ubuntu.com/GutsyReleaseNotes -->
+(ubuntu-7-10-release-notes)=
+# Ubuntu 7.10 release notes
 
 #REDIRECT GutsyGibbon/ReleaseNotes
