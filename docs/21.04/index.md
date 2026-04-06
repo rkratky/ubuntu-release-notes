@@ -2,16 +2,12 @@
 tocdepth: 3
 ---
 
+<!-- SOURCE: https://discourse.ubuntu.com/t/hirsute-hippo-draft-release-notes/19221 -->
+
 (ubuntu-21-04-release-notes)=
-# Ubuntu 21.04 "Hirsute Hippo" Release Notes
+# Ubuntu 21.04 release notes
 
-<!-- Source: https://discourse.ubuntu.com/t/hirsute-hippo-draft-release-notes/19221 -->
-
-laney | 2021-07-26 15:34:33 UTC | #1
-
-# Hirsute Hippo Release Notes
-
-# Introduction
+## Introduction
 
 These release notes for **Ubuntu 21.04** (Hirsute Hippo) provide an overview of the release and document the known issues with Ubuntu and its flavours.
 
@@ -23,7 +19,7 @@ Subscribers to the `ubuntu-announce` mailing list and long term participants in 
 
 Ubuntu 21.04 will be supported for 9 months until January 2022. If you need Long Term Support, it is recommended you use [Ubuntu 20.04 LTS](https://wiki.ubuntu.com/FocalFossa/ReleaseNotes/) instead.
 
-# Get Ubuntu 21.04
+## Get Ubuntu 21.04
 
 ## Download Ubuntu 21.04
 
@@ -74,11 +70,11 @@ There are no offline upgrade options for Ubuntu Desktop and Ubuntu Server. Pleas
 Users of the i386 architecture will not be presented with an upgrade. Support for i386 as a host architecture is dropped in 19.10.
 -->
 
-# New features in 21.04
+## New features in 21.04
 
 ## Updated Packages
 
-## Linux kernel 🐧
+### Linux kernel 🐧
 
 Ubuntu 21.04 includes the **5.11** Linux kernel. This includes numerous updates and added support since the 5.8 Linux kernel released in Ubuntu 20.10. Some notable examples include:
 
@@ -368,17 +364,17 @@ APT now respects phased updates, see the [Phased updates in APT 21.04](https://d
 The package popularity-contest is no longer seeded and is not configured to submit information to popcon.ubuntu.com as the client and server have been broken for multiple releases of Ubuntu.
 
 
-# Known Issues
+## Known Issues
 
 As is to be expected, with any release, there are some significant known bugs that users may run into with this release of Ubuntu. The ones we know about at this point (and some of the workarounds), are documented here so you don't need to spend time reporting these bugs again:
 
-## Linux kernel
+### Linux kernel
 
  * [s390x KVM guests only] Hirsute KVM guests do not react correctly to the detachment of KVM disks initiated from the host, leaving stale block devices that can cause hung processes. It is advisable to defer upgrading s390x KVM guests to Hirsute until [bug 1925211](https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1925211) is fixed if disks are to be detached from the VM.
 
 * KVM postcopy migration will - with the new default settings of kernel v5.11 - no more work out of the box. This is due to [userfaultfd: add user-mode only option to unprivileged_userfaultfd sysctl knob](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=d0d4730ac2) which for security reasons has a default that prohibits this kind of  migrations. If an admin wants to enable unrestricted userfaults he can do so via `sudo sysctl -w "vm.unprivileged_userfaultfd=1"` then postcopy migrations will work again.
 
-## Ubuntu Desktop
+### Ubuntu Desktop
 
 * On a system which uses Broadcom wireless if you enable the wireless driver before installing Ubuntu then the drivers will not be available on the installed system. To workaround this do not enable the wireless driver before installation. ([bug 1923477](https://bugs.launchpad.net/ubuntu-release-notes/+bug/1923477))
 
@@ -416,7 +412,7 @@ Container hosts running other operating systems may need manual updates. ([bug 1
 ### RISC-V
 * Reboot and shutdown commands do not currently work on the HiFive Unmatched. Power cycling requires physical access to the board. ([bug 1937055](https://bugs.launchpad.net/ubuntu/+source/opensbi/+bug/1937055))
 
-# Official flavours
+## Official flavours
 
 The release notes for the official flavours can be found at the following links:
 
@@ -428,7 +424,7 @@ The release notes for the official flavours can be found at the following links:
   * [Ubuntu Studio Release Notes](https://ubuntustudio.org/21-04-release-notes/)
   * [Xubuntu Release Notes](https://wiki.xubuntu.org/releases/21.04/release-notes)
 
-# More information
+## More information
 
 ## Reporting bugs
 
@@ -447,12 +443,3 @@ You can find out more about Ubuntu on the [Ubuntu website](https://www.ubuntu.co
 To sign up for future Ubuntu development announcements, please subscribe to Ubuntu's development announcement list at:
 
   * https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce
-
--------------------------
-
-bdmurray | 2023-04-20 14:47:57 UTC | #2
-
-
-
--------------------------
-
