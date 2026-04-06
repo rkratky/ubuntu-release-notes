@@ -2,24 +2,12 @@
 tocdepth: 3
 ---
 
+<!-- SOURCE: https://discourse.ubuntu.com/t/mantic-minotaur-release-notes/35534 -->
+
 (ubuntu-23-10-release-notes)=
-# Ubuntu 23.10 "Mantic Minotaur" Release Notes
+# Ubuntu 23.10 release notes
 
-<!-- Source: https://discourse.ubuntu.com/t/mantic-minotaur-release-notes/35534 -->
-
-utkarsh | 2023-11-20 09:37:31 UTC | #1
-
-# Mantic Minotaur Release Notes
-
-# Table of Contents
-
-- [Introduction](#heading--introduction)
-- [New features in 23.10](#heading--new-features-in-23-10)
-- [Known Issues](#heading--known-issues)
-- [Official flavours](#heading--official-flavours)
-- [More information](#heading--more-information)
-
-<h1 id="heading--introduction">Introduction</h1>
+## Introduction
 
 These release notes for **Ubuntu 23.10** (Mantic Minotaur) provide an overview of the release and document the known issues with Ubuntu and its flavours.
 
@@ -27,13 +15,13 @@ These release notes for **Ubuntu 23.10** (Mantic Minotaur) provide an overview o
 
 Ubuntu 23.10 will be supported for 9 months until July 2024. If you need Long Term Support, we recommend you use [Ubuntu 22.04 LTS](https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/) instead.
 
-<h1 id="heading--new-features-in-23-10">New features in 23.10</h1>
+## New features in 23.10
 
 ## Updated Packages
 
 * `add-apt-repository` now adds PPAs as deb822 `.sources` files (https://discourse.ubuntu.com/t/improvements-to-ppa-management-in-23-10/35783).
 
-## Linux kernel 🐧
+### Linux kernel 🐧
 
 Ubuntu 23.10 includes the new 6.5 Linux kernel that brings many new features.
 
@@ -59,11 +47,11 @@ Notable Ubuntu-specific changes:
 * New zfs 2.2.0~rc3.
 * Ceph support for idmapped mounts.
 
-## systemd v253.5
+### systemd v253.5
 
 The init system was updated to systemd v253.5. See the [upstream changelog](https://github.com/systemd/systemd/releases/tag/v253) for more information about individual features.
 
-## Netplan v0.107
+### Netplan v0.107
 The network stack was updated to [Netplan v0.107](https://discourse.ubuntu.com/t/blog-netplan-developer-diaries/35932/6), introducing support for `dummy` and `veth` devices in addition to providing Python bindings to `libnetplan` in the **python3-netplan** package.
 
 ## Toolchain Upgrades 🛠️
@@ -384,11 +372,11 @@ In addition changed in the area of pkey with support for EP11 API ordinal 6 for 
 
 * Finally version bumps of the smc-tools ([LP: #2027825](https://launchpad.net/bugs/2027825)) and qclib ([LP: #2027670](https://launchpad.net/bugs/2027670)) to it's latest versions; libgmp now with s390x SIMD optimizations ([LP: #1926752](https://launchpad.net/bugs/1926752)) and support in gcc to preserve register arguments ([LP: #2025575](https://launchpad.net/bugs/2025575)).
 
-<h1 id="heading--known-issues">Known Issues</h1>
+## Known Issues
 
 As is to be expected with any release, there are some significant known bugs that users may encounter with this release of Ubuntu. The ones we know about at this point (and some of the workarounds) are documented here, so you don't need to spend time reporting these bugs again:
 
-## General
+### General
 
 * The Live Session of the new Ubuntu Desktop installer is not localized. It is still possible to perform a non-English installation using the new installer, but internet access at install time is required to download the language packs. Should this be an issue, use the legacy installer images. ([LP: #2013329](https://bugs.launchpad.net/ubuntu-release-notes/+bug/2013329))
 
@@ -396,7 +384,7 @@ As is to be expected with any release, there are some significant known bugs tha
 
 * When upgrading to Mantic, it fails to install snap firmware-updater. The workaround is to install the snap after upgrade. ([LP: #2039268](https://bugs.launchpad.net/ubuntu/+source/ubuntu-release-upgrader/+bug/2039268)).
 
-## Linux kernel
+### Linux kernel
 
 * Some newer servers with BMCs using an Aspeed GPU may appear to hang while booting the installer image when using an attached display or the virtual KVM ([LP: #2042850](https://bugs.launchpad.net/ubuntu/+source/linux/+bug/2042850)). The workaround is to add the `nomodeset` parameter to the kernel command-line. Follow these steps:
 
@@ -416,7 +404,7 @@ GRUB_CMDLINE_LINUX="nomodeset"
 ```
 6. Finally, run `sudo update-grub` to make the change take effect.
 
-## Ubuntu Desktop
+### Ubuntu Desktop
 
 * The Ubuntu Desktop images are labelled as 23.10.1 instead of 23.10 due to the installer translation incident as mentioned [here](https://discourse.ubuntu.com/t/announcement-ubuntu-desktop-23-10-release-image-translation-incident-now-resolved/39365). The contents of 23.10.1 are the same as any other image with the exception of shipping a newer ubuntu-desktop-installer.
 
@@ -432,7 +420,7 @@ GRUB_CMDLINE_LINUX="nomodeset"
 
 * The installer re-launches itself with the version shipped on the ISO instead of the latest version after updating it through its refresh mechanism ([#2377](https://github.com/canonical/ubuntu-desktop-installer/issues/2377)). 
 
-## Ubuntu Server
+### Ubuntu Server
 
 In some situations, it is acceptable to proceed with an offline installation when the mirror is inaccessible. In this scenario, it is advised to use:
 
@@ -441,7 +429,7 @@ apt:
   fallback: offline-install
 ```
 
-### GRUB
+#### GRUB
 GRUB 2.12 as included in mantic [regresses support for UEFI HTTP boot](https://bugs.launchpad.net/ubuntu/+source/grub2/+bug/2039081).  We anticipate this being corrected in a subsequent package update.  Since the netboot tarball provided in Ubuntu 23.10 does not include this functionality, users who need UEFI HTTP boot support are recommended to use the netboot tarball from Ubuntu 23.04 instead.
 
 ## Platforms
@@ -486,7 +474,7 @@ The work to no longer listen on this port is being tracked @ https://bugs.launch
 
 Nothing yet.
 
-<h1 id="heading--official-flavours">Official flavours</h1>
+## Official flavours
 
 Find the release notes for the official flavours at the following links:
 
@@ -501,7 +489,7 @@ Find the release notes for the official flavours at the following links:
 * [Ubuntu Kylin Release Notes](https://www.ubuntukylin.com/news/ubuntukylin2310-en.html)
 * [Ubuntu Cinnamon Release Notes](https://ubuntucinnamon.org/?p=1247/)
 
-<h1 id="heading--more-information">More information</h1>
+## More information
 
 ## Reporting bugs
 
@@ -530,12 +518,3 @@ If you would like to help shape Ubuntu, look at the list of ways you can partici
 You can find out more about Ubuntu on the [Ubuntu website](https://ubuntu.com).
 
 To sign up for future Ubuntu development announcements, subscribe to Ubuntu's development announcement list at [ubuntu-devel-announce](https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce).
-
--------------------------
-
-bdmurray | 2023-05-03 14:39:10 UTC | #2
-
-
-
--------------------------
-
