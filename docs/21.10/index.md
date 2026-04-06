@@ -2,16 +2,12 @@
 tocdepth: 3
 ---
 
+<!-- SOURCE: https://discourse.ubuntu.com/t/impish-indri-release-notes/21951 -->
+
 (ubuntu-21-10-release-notes)=
-# Ubuntu 21.10 "Impish Indri" Release Notes
+# Ubuntu 21.10 release notes
 
-<!-- Source: https://discourse.ubuntu.com/t/impish-indri-release-notes/21951 -->
-
-laney | 2022-01-27 23:58:07 UTC | #1
-
-# Impish Indri Release Notes
-
-# Introduction
+## Introduction
 
 These release notes for **Ubuntu 21.10** (Impish Indri) provide an overview of the release and document the known issues with Ubuntu and its flavours.
 
@@ -19,7 +15,7 @@ These release notes for **Ubuntu 21.10** (Impish Indri) provide an overview of t
 
 Ubuntu 21.10 will be supported for 9 months until July 2022. If you need Long Term Support, it is recommended you use [Ubuntu 20.04 LTS](https://wiki.ubuntu.com/FocalFossa/ReleaseNotes/) instead.
 
-# Get Ubuntu 21.10
+## Get Ubuntu 21.10
 
 ## Download Ubuntu 21.10
 
@@ -38,7 +34,7 @@ You can download ISOs and flashable images from:
   * [Ubuntu Studio](http://cdimage.ubuntu.com/ubuntustudio/releases/21.10/release/)
   * [Xubuntu](http://cdimage.ubuntu.com/xubuntu/releases/21.10/release/)
 
-# Upgrading from Ubuntu 21.04
+## Upgrading from Ubuntu 21.04
 
 To upgrade on a desktop system:
 
@@ -65,11 +61,11 @@ There are no offline upgrade options for Ubuntu Desktop and Ubuntu Server. Pleas
 
 Users of the i386 architecture will not be presented with an upgrade. Support for i386 as a host architecture is dropped in 19.10.
 
-# New features in 21.10
+## New features in 21.10
 
 ## Updated Packages
 
-## Linux kernel 🐧
+### Linux kernel 🐧
 
 [Linux 5.13](https://kernelnewbies.org/Linux_5.13) introduces support for new hardware and some less new:
  * Future Intel and AMD chips, such as Intel Alderlake S or AMD Adebaran.
@@ -263,16 +259,16 @@ On the kernel level AP bus and zcrypt uevent extensions were added to the zcrypt
   * The Query Capacity library (qclib) got bumped to it's latest version 2.3.0 ([bug 1926586](https://bugs.launchpad.net/bugs/1926586)), the upgraded glibc v2.34 library comes with several s390x related improvements ([bug 1927079](https://bugs.launchpad.net/bugs/1927079)), similar with the binutils update to v2.37 ([bug 1927080](https://bugs.launchpad.net/bugs/1927080)). On top zlib received CRC32 optimization for s390x ([bug 1932010](https://bugs.launchpad.net/bugs/1932010)) and also PCRE2 got performance and JIT improvements for s390x ([bug 1931857](https://bugs.launchpad.net/bugs/1931857)).
 And upport for SMC statistics was introduced to the kernel ([bug 1853290](https://bugs.launchpad.net/bugs/1853290)) and the smc-tools package updated to it's latest v1.6.0, plus some fixes on top ([bug 1853301](https://bugs.launchpad.net/bugs/1853301)).
 
-# Known Issues
+## Known Issues
 
 As is to be expected, with any release, there are some significant known bugs that users may run into with this release of Ubuntu. The ones we know about at this point (and some of the workarounds), are documented here so you don't need to spend time reporting these bugs again:
 
-## Linux kernel
+### Linux kernel
 
 * The version of the ZFS driver included in the 5.13.0-19 kernel [contains a bug](https://bugs.launchpad.net/bugs/1906476) that can result in filesystem corruption.  Users of ZFS are advised to wait until the first Stable Release Update of the kernel in 21.10 before upgrading. 
 
 
-## Ubuntu Desktop
+### Ubuntu Desktop
 
 * The Ubuntu Desktop images can be slow to boot (taking up to 10 minutes) when booted from a USB drive on a BIOS system. The issue is being [investigated](https://bugs.launchpad.net/ubuntu/+source/casper/+bug/1922342). Once the system is installed this is not an issue.
 * The Ubuntu Desktop images can be very slow to boot (taking up to 30 minutes) when booted from optical media (DVD) on a a BIOS or UEFI system. This is due to an integrity checker being run against the installation media. A workaround (setting "fsck.mode=skip") is documented in [the relevant bug](https://bugs.launchpad.net/ubuntu/+source/casper/+bug/1930880).
@@ -283,7 +279,7 @@ As is to be expected, with any release, there are some significant known bugs th
 
 * If you have Chromium and Firefox installed before upgrading to Ubuntu 21.10, your default browser (called via x-www-browser, x-gnome-browser, or sensible-browser) will be Chromium. For details on how to set your default browser to Firefox see [this forum post](https://forum.snapcraft.io/t/firefox-snap-cannot-be-set-as-default-browser/26636).
 
-## Ubuntu Server
+### Ubuntu Server
 
 Nothing yet.
 
@@ -315,7 +311,7 @@ Nothing yet.
 * This is not an issue per-se, but enough visible to be release-note worthy. Starting with 20.04.3 useradd will not allow creating full-numeric usernames (e.g. 123, 1337). Such usernames cause issues with components such as systemd, so it was safer to disallow them altogether ([bug 1927078](https://bugs.launchpad.net/bugs/1927078)).
 * After installing a Xubuntu system during the shutdown process you will not see a message about removing the installation media and pressing enter, instead you might just see a Xubuntu logo, a black screen with an underscore in the upper left hand corner, or just a black screen. If you press enter the system will reboot though. ([bug 1944519](https://bugs.launchpad.net/ubuntu-release-notes/+bug/1944519))
 
-# Official flavours
+## Official flavours
 
 The release notes for the official flavours can be found at the following links:
 
@@ -327,7 +323,7 @@ The release notes for the official flavours can be found at the following links:
   * [Ubuntu Studio Release Notes](https://ubuntustudio.org/ubuntu-studio-21-10-release-notes/)
   * [Xubuntu Release Notes](https://wiki.xubuntu.org/releases/21.10/release-notes)
 
-# More information
+## More information
 
 ## Reporting bugs
 
@@ -346,24 +342,3 @@ You can find out more about Ubuntu on the [Ubuntu website](https://www.ubuntu.co
 To sign up for future Ubuntu development announcements, please subscribe to Ubuntu's development announcement list at:
 
   * https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce
-
--------------------------
-
-laney | 2021-10-15 07:33:21 UTC | #3
-
-
-
--------------------------
-
-bdmurray | 2023-04-20 14:39:20 UTC | #4
-
-
-
--------------------------
-
-bdmurray | 2023-04-20 14:46:03 UTC | #5
-
-
-
--------------------------
-
