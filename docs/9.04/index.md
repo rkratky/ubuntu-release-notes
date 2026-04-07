@@ -203,7 +203,10 @@ Users of Intel video chipsets have reported performance regressions in Ubuntu 8.
 
 * Alternatively, a new experimental acceleration architecture option, "DRI2/UXA", is available for Intel graphics users which our [testing](https://wiki.ubuntu.com/X/UxaTesting) has found provides significant performance improvements in some cases, but has also shown risk of severe stability problems.  You can opt-in to enable this by running "sudo gedit /etc/X11/xorg.conf", and adding `Option "AccelMethod" "UXA"` to the `Device` section of your `xorg.conf`.  Users wishing to maximize stability should stay with the standard default acceleration method, "EXA".
 
-/!\ In some cases this will lead to the graphical environment not starting at all or becoming entirely unusable. In that case, start into rescue mode or press Ctrl+Alt+F2 and log into the text console, and use `sudo nano /etc/X11/xorg.conf` to revert the UXA option.
+
+```{warning}
+In some cases this will lead to the graphical environment not starting at all or becoming entirely unusable. In that case, start into rescue mode or press Ctrl+Alt+F2 and log into the text console, and use `sudo nano /etc/X11/xorg.conf` to revert the UXA option.
+```
 
 * If none of the above helps, some users reported success with [using an older driver version](https://wiki.ubuntu.com/ReinhardTartler/X/RevertingIntelDriverTo2.4).
 
