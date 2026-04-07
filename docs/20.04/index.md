@@ -143,7 +143,7 @@ Other notable kernel updates to **5.4** since version 4.15 released in 18.04 LTS
 
 * Numerous USB 3.2 and Type-C improvements.
 
-* A new mount API, the io_uring interface, KVM support for AMD Secure Encrypted Virtualization and pidfd support.
+* A new mount API, the `io_uring` interface, KVM support for AMD Secure Encrypted Virtualization and `pidfd` support.
 
 * Boot speed improvements through changing the default kernel compression algorithm to lz4 (in Ubuntu 19.10) on most architectures, and changing the default initramfs compression algorithm to lz4 on all architectures.
 
@@ -151,7 +151,7 @@ Other notable kernel updates to **5.4** since version 4.15 released in 18.04 LTS
 (20-04-lts-toolchain-upgrades)=
 #### Toolchain Upgrades 🛠️
 
-Ubuntu 20.04 LTS comes with refreshed state-of-the-art toolchain including new upstream releases of glibc 2.31, ☕ OpenJDK 11, rustc 1.41, GCC 9.3, 🐍 Python 3.8.2, 💎 ruby 2.7.0, php 7.4, 🐪 perl 5.30, golang 1.13.
+Ubuntu 20.04 LTS comes with refreshed state-of-the-art toolchain including new upstream releases of `glibc` 2.31, ☕ OpenJDK 11, `rustc` 1.41, GCC 9.3, 🐍 Python 3.8.2, 💎 ruby 2.7.0, PHP 7.4, 🐪 Perl 5.30, `golang` 1.13.
 
 
 (20-04-lts-ubuntu-desktop)=
@@ -220,7 +220,7 @@ Continuing with what started in the Eoan release, Ubuntu Focal ships zfs 0.8.3. 
 * Native Encryption (with hardware acceleration enabled in Focal)
 * Device removal
 * Pool TRIM
-* Sequential scrub and resilver (performance)
+* Sequential scrub and resolver (performance)
 
 Upstream 0.8.0 release notes: [github.com/openzfs/zfs/releases/tag/zfs-0.8.0](https://github.com/openzfs/zfs/releases/tag/zfs-0.8.0)
 
@@ -277,7 +277,7 @@ There is so much that it is hard to select individual improvements to highlight,
 
 * free page hinting through virtio-balloon to avoid migrating unused pages which can speed up migrations
 
-* PPC: NVIDIA V100 GPU/NVLink2 passthrough for spapr using VFIO PCI
+* PPC: NVIDIA V100 GPU/NVLink2 passthrough for `spapr` using VFIO PCI
 
 * Many speed improvements for LUKS backend
 
@@ -295,17 +295,17 @@ When upgrading it is always recommended to [upgrade the machine types](https://w
 (20-04-lts-upgrading-from-19-10)=
 ##### upgrading from 19.10
 
-For trimmed down container like isolation use-cases the new qemu has the [microvm](https://github.com/bonzini/qemu/blob/master/docs/microvm.rst) machine type which can be combined with the [qboot](https://github.com/bonzini/qboot) ROM (available as `bios-microvm.bin`) to provide a reduced feature set at a much faster startup time. To further emphasize that you can use the package `qemu-system-x86-microvm` which provides an alternative QEMU binary stripped of all features not needed these use cases as sugegsted by the [qboot](https://github.com/bonzini/qboot) ROM.
+For trimmed down container like isolation use-cases the new `qemu` has the [microvm](https://github.com/bonzini/qemu/blob/master/docs/microvm.rst) machine type which can be combined with the [`qboot`](https://github.com/bonzini/qboot) ROM (available as `bios-microvm.bin`) to provide a reduced feature set at a much faster startup time. To further emphasize that you can use the package `qemu-system-x86-microvm` which provides an alternative QEMU binary stripped of all features not needed these use cases as suggested by the [`qboot`](https://github.com/bonzini/qboot) ROM.
 
-The VMX related features can now be controlled individually instead of just vmx on/off. Due to that the VMX-subfeatures of certain CPU types might have slightly changed (matching those of the selected CPU type now instead of almost randomly depending on the underlying hardware). In general it is - and always was - recommended to use a well defined cpu type when defining a guest, this is also what almost all higher level management tools from virt-manager to openstack will do. But if you want the most generic and compatible cpu but also enable VMX please use the type `kvm64` instead of `qemu64` now.
+The VMX related features can now be controlled individually instead of just `vmx` on/off. Due to that the VMX-subfeatures of certain CPU types might have slightly changed (matching those of the selected CPU type now instead of almost randomly depending on the underlying hardware). In general it is - and always was - recommended to use a well defined cpu type when defining a guest, this is also what almost all higher level management tools from `virt-manager` to OpenStack will do. But if you want the most generic and compatible cpu but also enable VMX please use the type `kvm64` instead of `qemu64` now.
 
-People that like to work or experiment with nvdimms and persistent memory QEMU now has [pmem](https://docs.pmem.io/persistent-memory/getting-started-guide/creating-development-environments/virtualization/qemu) and [nvdimm](https://github.com/qemu/qemu/blob/master/docs/nvdimm.txt) support enabled in Ubuntu Focal Fossa.
+People that like to work or experiment with NVDIMMs and persistent memory QEMU now has [pmem](https://docs.pmem.io/persistent-memory/getting-started-guide/creating-development-environments/virtualization/qemu) and [nvdimm](https://github.com/qemu/qemu/blob/master/docs/nvdimm.txt) support enabled in Ubuntu Focal Fossa.
 
 
 (20-04-lts-upgrading-from-18-04)=
 ##### upgrading from 18.04
 
-QEMU now has [virglrenderer](https://virgil3d.github.io/) enabled which allows to create a virtual 3D GPU inside QEMU virtual machines. That is inferior to GPU passthrough, but can be handy if the platform used lacks the capability for classic [PCI passthrough](https://www.linux-kvm.org/page/How_to_assign_devices_with_VT-d_in_KVM) as well as more modern [mediated devices](https://www.kernel.org/doc/Documentation/vfio-mediated-device.txt).
+QEMU now has [`virglrenderer`](https://virgil3d.github.io/) enabled which allows to create a virtual 3D GPU inside QEMU virtual machines. That is inferior to GPU passthrough, but can be handy if the platform used lacks the capability for classic [PCI passthrough](https://www.linux-kvm.org/page/How_to_assign_devices_with_VT-d_in_KVM) as well as more modern [mediated devices](https://www.kernel.org/doc/Documentation/vfio-mediated-device.txt).
 
 The graphical QEMU back-end is now based on GTK instead of SDL. That provides much better Desktop integration and is often faster.
 
@@ -313,7 +313,7 @@ The graphical QEMU back-end is now based on GTK instead of SDL. That provides mu
 (20-04-lts-libvirt)=
 #### libvirt
 
-libvirt was updated to version 6.0. See the upstream [change log](https://libvirt.org/news.html) for details since version 5.6 that was in Ubuntu 19.04 or further back since verison 4.0 that was in Ubuntu 18.04.
+`libvirt` was updated to version 6.0. See the upstream [change log](https://libvirt.org/news.html) for details since version 5.6 that was in Ubuntu 19.04 or further back since `verison` 4.0 that was in Ubuntu 18.04.
 
 
 (20-04-lts-upgrading-from-19-10-2)=
@@ -333,9 +333,9 @@ Among many improvements worth to mention might be the features:
 (20-04-lts-upgrading-from-18-04-2)=
 ##### upgrading from 18.04
 
-Worth mentioning is that libvirt can now enable QEMUs ability to use [parallel connections for migration](http://manpages.ubuntu.com/manpages/eoan/man1/virsh.1.html) which can help to speed up migrations if one doesn't saturate your network yet.
+Worth mentioning is that `libvirt` can now enable QEMU's ability to use [parallel connections for migration](http://manpages.ubuntu.com/manpages/eoan/man1/virsh.1.html) which can help to speed up migrations if one doesn't saturate your network yet.
 
-Administrators might like the ease of a new local include apparmor to the libvirt-qemu profile that allows local overrides for special devices or paths matching your setup without conffile delta that has to be managed on later upgrades.
+Administrators might like the ease of a new local include AppArmor to the `libvirt-qemu` profile that allows local overrides for special devices or paths matching your setup without conffile delta that has to be managed on later upgrades.
 
 Added the ability to have GL enabled graphics as well as mediated devices to be configured while still being guarded by custom apparmor profiles generated per guest. This is required for the use of gpu based mediated devices as well as VirGL mentioned above in the qemu section.
 
@@ -351,9 +351,9 @@ _ **libvirt-clients** - cli tools to interact with libvirt like _virsh*
 
 * **libvirt-daemon** - just the libvirt daemon, without services/configuration
 
-In a similar fashion rarely used and less supported sub-features like virtualbox and xen control, as well as uncommon storage options are broken out into various *libvirt-daemon-driver-** packages. That allows to reduce the install footprint and active code in the majority of installations.
+In a similar fashion rarely used and less supported sub-features like `virtualbox` and `xen` control, as well as uncommon storage options are broken out into various `libvirt-daemon-driver-*` packages. That allows to reduce the install footprint and active code in the majority of installations.
 
-Packages and project had plenty of time to transition, so now the empty compatibility package libvirt-bin that was pulling in _libvirt-daemon-system_ + _libvirt-clients_ was finally dropped. If you happen to have scripts or third party components referring to the old name use the list above to select which new package makes most sense to you.
+Packages and project had plenty of time to transition, so now the empty compatibility package `libvirt-bin` that was pulling in `libvirt-daemon-system` + `libvirt-clients` was finally dropped. If you happen to have scripts or third party components referring to the old name use the list above to select which new package makes most sense to you.
 
 
 (20-04-lts-dpdk)=
@@ -423,7 +423,7 @@ Cloud-init was updated to version 20.1-10. Notable features include:
    are present
 
 * Read network config from initramfs
-* net: support network-config:disabled on the kernel commandline
+* net: support network-config:disabled on the kernel command line
 * Add physical network type: cascading to openstack helpers
 * net/cmdline: correctly handle static ip= config
 
@@ -433,8 +433,8 @@ Cloud-init was updated to version 20.1-10. Notable features include:
 
 * distros: drop leading/trailing hyphens from mirror URL labels
 * cc_disk_setup: add swap filesystem force flag
-* cloud-init query surfaces merged_cfg and system_info dicts for use in
-   Jinja templated cloud-config when opinionated based on series, platform
+* cloud-init query surfaces merged_cfg and system_info dictionaries for use in
+   Jinja-templated cloud-config when opinionated based on series, platform
 
 * use SystemRandom when generating random password.
 
@@ -454,12 +454,12 @@ The default Ruby interpreter was updated to version 2.7. It comes with some nice
 
 Users coming from previous Ubuntu releases (from 18.04 on) will be moving from Ruby 2.5 to 2.7, in this case the [Ruby 2.6 Release Announcement](https://www.ruby-lang.org/en/news/2018/12/25/ruby-2-6-0-released/) might be useful as well. An important thing to keep in mind is that some libraries are not bundled anymore in Ruby. If you need them please install them separately:
 
-* CMath
-* Scanf
-* Shell
-* Synchronizer (ruby-sync)
-* ThreadsWait (ruby-thwait)
-* E2MM (ruby-e2mmap)
+* `CMath`
+* `Scanf`
+* `Shell`
+* `Synchronizer` (`ruby-sync`)
+* `ThreadsWait` (`ruby-thwait`)
+* `E2MM` (`ruby-e2mmap`)
 
 For more information check out this [blog post](https://discourse.ubuntu.com/t/ruby-2-7-in-focal/15020).
 
@@ -467,8 +467,7 @@ For more information check out this [blog post](https://discourse.ubuntu.com/t/r
 (20-04-lts-ruby-on-rails-5-2-3)=
 #### Ruby on Rails 5.2.3
 
-Ruby on Rails was updated to version 5.2.3. From users coming from Ubuntu 18.04 is a major change, moving from version 4.2.10 to 5.2.3. Some highlights are: addition of Action Cable framework, option to create slimmed down API only appli
-cations, Active Record attributes API and so on. Check the Ruby on Rails [5](https://guides.rubyonrails.org/5_0_release_notes.html) and [5.2](https://guides.rubyonrails.org/5_2_release_notes.html) Release Notes for an overview.
+Ruby on Rails was updated to version 5.2.3. From users coming from Ubuntu 18.04 is a major change, moving from version 4.2.10 to 5.2.3. Some highlights are: addition of Action Cable framework, option to create slimmed down API-only applications, Active Record attributes API and so on. Check the Ruby on Rails [5](https://guides.rubyonrails.org/5_0_release_notes.html) and [5.2](https://guides.rubyonrails.org/5_2_release_notes.html) Release Notes for an overview.
 
 If you need to upgrade your Ruby on Rails application please take a look at the
 [upstream upgrading guide](https://guides.rubyonrails.org/upgrading_ruby_on_rails.html).
@@ -481,16 +480,16 @@ If you need to upgrade your Ruby on Rails application please take a look at the
 (20-04-lts-kronosnet)=
 ##### Kronosnet
 
-kronosnet (or knet for short) is the new underlying network protocol for Linux
-HA components (corosync), that features the ability to use multiple links
+kronosnet (or `knet` for short) is the new underlying network protocol for Linux
+HA components (`corosync`), that features the ability to use multiple links
 between nodes, active/active and active/passive link failover policies,
 automatic link recovery, FIPS compliant encryption (NSS and/or OpenSSL),
-automatic PMTUd and in general better performance compared to the old network
+automatic PMTUD and in general better performance compared to the old network
 protocol.
 
 Main NEW features:
 
-* Up to 8 links dynamically reconfigured without restart of corosync
+* Up to 8 links dynamically reconfigured without restart of `corosync`
 * MTU auto-configuration
 * Support for NSS or OpenSSL encryption of packets
 * Compression
@@ -581,17 +580,17 @@ Important packaging changes are:
 
 * no `-dev` package at the moment, as upstream discourages linking with its libraries. See a bit of a discussion about that here: [gitlab.isc.org/isc-projects/bind9/-/merge_requests/3089#note_111299](https://gitlab.isc.org/isc-projects/bind9/-/merge_requests/3089#note_111299). Debian just added the `dev` package back (2020-04-16), we might follow with an SRU: [bugs.debian.org/954906](https://bugs.debian.org/954906)
 
-* bind-libs 9.11.x package: used for software projects that do not yet work with the new 9.16 version, like isc-dhcp.
+* `bind-libs` 9.11.x package: used for software projects that do not yet work with the new 9.16 version, like isc-dhcp.
 
-* bind-dyndb-ldap has not yet been ported to bind9 9.16.x
+* `bind-dyndb-ldap` has not yet been ported to bind9 9.16.x
 
-* geoip legacy support was removed and replaced with geoip2 (libmaxminddb)
+* `geoip` legacy support was removed and replaced with `geoip2` (`libmaxminddb`)
 
-Upstream blog post about major changes in bind9 9.16.0: [www.isc.org/blogs/bind9.16.0_released/](https://www.isc.org/blogs/bind9.16.0_released/)
+Upstream blog post about major changes in `bind9` 9.16.0: [www.isc.org/blogs/bind9.16.0_released/](https://www.isc.org/blogs/bind9.16.0_released/)
 
 More detailed release notes: [downloads.isc.org/isc/bind9/9.16.0/RELEASE-NOTES-bind-9.16.0.html](https://downloads.isc.org/isc/bind9/9.16.0/RELEASE-NOTES-bind-9.16.0.html)
 
-Presentation about the development of bind9 culminating in this new release: [youtu.be/5math9Oy97s?t=46](https://youtu.be/5math9Oy97s?t=46)
+Presentation about the development of `bind9` culminating in this new release: [youtu.be/5math9Oy97s?t=46](https://youtu.be/5math9Oy97s?t=46)
 
 
 (20-04-lts-openssh-updates-with-u2f-support)=
@@ -624,10 +623,12 @@ Welcome to Ubuntu Focal Fossa (development branch) (GNU/Linux 5.4.0-21-generic x
 ubuntu@focal.server:~$
 ```
 
-/!\ If you don't see the prompt asking for the user presence confirmation, then you are affected by
+:::{warning}
+If you don't see the prompt asking for the user presence confirmation, then you are affected by
 
-  - block-discover supports multipath discovery
-  - vmtest add ppc64le/arm64 architectures
+  - `block-discover` supports multipath discovery
+  - `vmtest` add ppc64le/arm64 architectures
+:::
 
 Upstream development of OpenSSH 8.2 in Debian has [added support for an 'Includes' keyword](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=631189) in configuration files.  This allows including additional configuration files via glob(3) patterns.  By default the system sshd config (/etc/ssh/sshd_config) now [includes files under /etc/ssh/sshd_config.d/*.conf](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=952427).  For each keyword encountered in configuration files, the first obtained value will be used.  This is used in various [Cloud Images](https://wiki.ubuntu.com/FocalFossa/ReleaseNotes#Cloud_Images_.2BJgE-) to apply cloud-specific tuning while avoiding debconf prompts on package upgrade.
 
@@ -659,7 +660,7 @@ Chromium bug: [bugs.chromium.org/p/chromium/issues/detail?id=911653](https://bug
 
 Firefox bug: [bugzilla.mozilla.org/show_bug.cgi?id=1511989](https://bugzilla.mozilla.org/show_bug.cgi?id=1511989) (fixed, can be enabled by toggling security.tls.enable_post_handshake_auth)
 
-python httplib should enable post-handshake authentication for TLS 1.3: [bugs.python.org/issue37440](https://bugs.python.org/issue37440)
+Python `httplib` should enable post-handshake authentication for TLS 1.3: [bugs.python.org/issue37440](https://bugs.python.org/issue37440)
 
 
 (20-04-lts-samba-4-11)=
@@ -692,13 +693,13 @@ Upstream release notes: [www.postgresql.org/docs/12/release-12.html](https://www
 (20-04-lts-nginx)=
 #### nginx
 
-Starting in Focal Fossa, nginx-core no longer ships with the legacy geoip module enabled by default. If you are using the legacy geoip module in nginx, you may run into upgrade issues if you do not deactivate the geoip module in your configuration. This was done as part of the deprecation of GeoIP legacy support.
+Starting in Focal Fossa, `nginx-core` no longer ships with the legacy `geoip` module enabled by default. If you are using the legacy `geoip` module in nginx, you may run into upgrade issues if you do not deactivate the `geoip` module in your configuration. This was done as part of the deprecation of GeoIP legacy support.
 
 Here are some scenarios you might encounter:
 
-* Since nginx-core dropped the dependency on libnginx-mod-http-geoip, an "apt autoremove" might suggest that libnginx-mod-http-geoip can be removed. If this happens, and there are still geoip configuration directives, nginx will fail to restart. Note that this would also happen had we replaced libnginx-mod-http-geoip with libnginx-mod-http-geoip2, as the configuration directives are different
+* Since `nginx-core` dropped the dependency on `libnginx-mod-http-geoip`, an `apt autoremove` might suggest that `libnginx-mod-http-geoip` can be removed. If this happens, and there are still `geoip` configuration directives, nginx will fail to restart. Note that this would also happen had we replaced `libnginx-mod-http-geoip` with `libnginx-mod-http-geoip2`, as the configuration directives are different
 
-* If someone has just main enabled, with nginx-code and libnginx-mod-http-geoip installed, and release upgrades to focal, libnginx-mod-http-geoip won't be updated because it's in focal/universe.
+* If someone has just main enabled, with `nginx-code` and `libnginx-mod-http-geoip` installed, and release upgrades to Focal, `libnginx-mod-http-geoip` won't be updated because it's in `focal/universe`.
 
 
 (20-04-lts-squid-4-x)=
@@ -727,7 +728,7 @@ IBM Z and LinuxONE / s390x-specific enhancements since 19.10 (partly not limited
 
 * Starting with Ubuntu Server 20.04 LTS the architectural level set was changed to z13 (Bug:1836907). This has a significant impact: Ubuntu Server for s390x now benefits from improved and more instructions that got introduced with z13 hardware; at the same time support for zEC12/zBC12 got dropped and the minimum supported hardware is now IBM z13 and LinuxONE Rockhopper (I) and LinuxONE Emperor (I).
 
-* Secure Execution, a Trusted Execution Environment (TEE) for IBM Z and LinuxONE is now supported. It required adaptations in the kernel (Bug:1835531), qemu (Bug:1835546) and s390-tools (Bug:1834534). It can only be used with IBM z15 and LinuxONE III. With Secure Execution (or the upstream name 'protected virtualization' aka 'protvirt') workloads can run virtualized in full isolation with protection for both internal and external threats, using hardware assisted key based encryption for the guest memory.
+* Secure Execution, a Trusted Execution Environment (TEE) for IBM Z and LinuxONE is now supported. It required adaptations in the kernel (Bug:1835531), qemu (Bug:1835546) and s390-tools (Bug:1834534). It can only be used with IBM z15 and LinuxONE III. With Secure Execution (or the upstream name 'protected virtualization' aka `protvirt`) workloads can run virtualized in full isolation with protection for both internal and external threats, using hardware assisted key based encryption for the guest memory.
 
 * The toolchain was significantly upgraded to gcc 9.3 - making sure that fixes like (Bug:1862342) are included, even moved to gdb 9.1 (Bug:1825344), that includes latest s390x hardware support - similar with LLVM, that was upgraded to v10 (Bug:1853145), again to have the latest s390x hardware enhancements included (Bug:1853269).
 
@@ -876,15 +877,15 @@ As is to be expected, with any release, there are some significant known bugs th
 (20-04-lts-server)=
 ### Server
 
-* gdisk/sgdisk versions older than 1.0.8 erroneously write partition labels byte-swapped on big endian architectures. This is non critical and on s390x mainly affects virtio and FCP/SCSI disk partition labels (so any non-DASD-ECKD) - in case they were written by gdisk. Since this was always wrong - but written and read the same swapped way - it worked so far. Hence old releases just stay that way, but starting with 1.0.8 in Impish this is solved and even allows to fix/convert old broken labels. Newly created partitions and label with gdisk 1.0.8 will be correct; existing ones that were created with older gdisk version (that maybe re-used after a dist-upgrade etc.) need to be fixed/converted. ([bug 1931243](https://bugs.launchpad.net/bugs/1931243)).
+* `gdisk`/`sgdisk` versions older than 1.0.8 erroneously write partition labels byte-swapped on big endian architectures. This is non critical and on s390x mainly affects virtio and FCP/SCSI disk partition labels (so any non-DASD-ECKD) - in case they were written by `gdisk`. Since this was always wrong - but written and read the same swapped way - it worked so far. Hence old releases just stay that way, but starting with 1.0.8 in Impish this is solved and even allows to fix/convert old broken labels. Newly created partitions and label with `gdisk` 1.0.8 will be correct; existing ones that were created with older `gdisk` version (that maybe re-used after a `dist-upgrade` etc.) need to be fixed/converted. ([bug 1931243](https://bugs.launchpad.net/bugs/1931243)).
 
-* With Ubuntu Server 20.04.2 on IBM Z and LinuxONE (s390x) it is currently not possible to boot/IPL from NVMe devices that are represented as multipath devices. In case NVMe devices are used on s390x that are multipath capable, the multipath option needs to be switched off with the help of the kernel parameter 'nvme-core.multipath=0', otherwise 'chreipl' will not work properly and the post-install reboot fails ([bug 1902179](https://bugs.launchpad.net/bugs/1902179)).
+* With Ubuntu Server 20.04.2 on IBM Z and LinuxONE (s390x) it is currently not possible to boot/IPL from NVMe devices that are represented as multipath devices. In case NVMe devices are used on s390x that are multipath capable, the multipath option needs to be switched off with the help of the kernel parameter `nvme-core.multipath=0`, otherwise `chreipl` will not work properly and the post-install reboot fails ([bug 1902179](https://bugs.launchpad.net/bugs/1902179)).
 
 
 (20-04-lts-general)=
 ### General
 
-* This is not an issue per-se, but enough visible to be release-note worthy. Starting with 20.04.3 useradd will not allow creating full-numeric usernames (e.g. 123, 1337). Such usernames cause issues with components such as systemd, so it was safer to disallow them altogether ([bug 1927078](https://bugs.launchpad.net/bugs/1927078)).
+* This is not an issue per-se, but enough visible to be release-note worthy. Starting with 20.04.3 `useradd` will not allow creating full-numeric usernames (e.g. 123, 1337). Such usernames cause issues with components such as systemd, so it was safer to disallow them altogether ([bug 1927078](https://bugs.launchpad.net/bugs/1927078)).
 
 
 (20-04-lts-official-flavours)=
