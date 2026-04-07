@@ -44,7 +44,7 @@ Systems running TPM/FDE will now prompt for the recovery key before firmware upd
 
 ...
 
-#### `sudo-rs`
+#### sudo-rs
 
 Password feedback is now enabled by default in order to improve the user experience of `sudo`.
 If the previous behavior is preferred, password feedback can be disabled using the following steps:
