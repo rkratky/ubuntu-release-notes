@@ -84,7 +84,7 @@ Ubuntu 20.10 includes the __5.8__ Linux kernel. This includes numerous updates a
 
 ## Toolchain Upgrades 🛠️
 
-Ubuntu 20.10 comes with refreshed state-of-the-art toolchain including new upstream releases of glibc 2.32, ☕ OpenJDK 11, rustc 1.41, GCC 10, LLVM 11, :snake: Python 3.8.6, :gem: ruby 2.7.0, php 7.4.9, :dromedary_camel: perl 5.30, golang 1.13.
+Ubuntu 20.10 comes with refreshed state-of-the-art toolchain including new upstream releases of glibc 2.32, ☕ OpenJDK 11, rustc 1.41, GCC 10, LLVM 11, 🐍 Python 3.8.6, 💎 ruby 2.7.0, php 7.4.9, 🐪 perl 5.30, golang 1.13.
 
 ## Security Improvements 🔒
 
@@ -234,7 +234,7 @@ Nothing yet.
 
 ## Platforms
 
-### Cloud Images :cloud_with_lightning_and_rain:
+### Cloud Images ⛈️
 
 * On Google Compute Engine (GCE), the google-guest-agent package has introduced a [regression (LP: #1901033)](https://bugs.launchpad.net/google-guest-agent/+bug/1901033) for the google-startup-script service. Users making use of [startup scripts](https://cloud.google.com/compute/docs/startupscript) on GCE can see scripts run before cloud-init and snapd seeding have completed until the regression is addressed. Without waiting for cloud-final and snapd.seeded, startup scripts may not be presented with a consistent system that have archive mirrors set up, GCE's google-cloud-sdk snap installed, users in the proper groups, or other customizations owned by those services. As a work-around users can add `cloud-init status --wait` to the beginning of their startup script (as cloud-init does wait for snap seeding to complete).
 
@@ -274,23 +274,3 @@ The release notes for the official flavours can be found at the following links:
   * [Ubuntu MATE Release Notes](https://ubuntu-mate.org/blog/ubuntu-mate-groovy-gorilla-release-notes/)
   * [Ubuntu Studio Release Notes](https://wiki.ubuntu.com/GroovyGorilla/ReleaseNotes/UbuntuStudio)
   * [Xubuntu Release Notes](https://wiki.xubuntu.org/releases/20.10/release-notes)
-
-## More information
-
-## Reporting bugs
-
-Your comments, bug reports, patches and suggestions will help fix bugs and improve the quality of future releases. Please [report bugs using the tools provided](http://help.ubuntu.com/community/ReportingBugs). If you want to help out with bugs, the [Bug Squad](http://wiki.ubuntu.com/BugSquad) is always looking for help.
-
-## Participate in Ubuntu
-
-If you would like to help shape Ubuntu, take a look at the list of ways you can participate at:
-
- * https://community.ubuntu.com/contribute
-
-## More about Ubuntu
-
-You can find out more about Ubuntu on the [Ubuntu website](https://www.ubuntu.com).
-
-To sign up for future Ubuntu development announcements, please subscribe to Ubuntu's development announcement list at:
-
-  * https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce
