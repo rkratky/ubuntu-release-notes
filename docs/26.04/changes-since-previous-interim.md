@@ -848,11 +848,6 @@ If you want to continue using `mod-php`, override the setting by editing the Apa
 
 See [LP: #2144455](https://bugs.launchpad.net/ubuntu-release-notes/+bug/2144455) and the [systemd.exec documentation](https://www.freedesktop.org/software/systemd/man/latest/systemd.exec.html#MemoryDenyWriteExecute=) for more information.
 
-#### RabbitMQ
-
-```{include} /reuse/26.04/rabbitmq-upgrade.txt
-```
-
 <!--
 #### Openstack
 
