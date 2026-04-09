@@ -76,6 +76,10 @@ Other desktop sessions, such as [KDE on X11](https://kde.org/), [Xfce](https://w
 
 Machines using Nvidia graphics now fully support Wayland.
 
+### "Software & Updates" GUI
+
+The *Ubuntu Desktop* no longer includes the "Software & Updates" GTK GUI by default. For more details, [consult the Discourse announcement](https://discourse.ubuntu.com/t/why-we-re-saying-goodbye-to-software-updates/76783). The tool can be installed manually with `sudo apt install software-properties-gtk`. It has been also been updated to use the GTK 4 toolkit.
+
 ### App Center enhancements
 :::{versionadded} 24.10
 :::
