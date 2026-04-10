@@ -793,13 +793,17 @@ OEM installs are not supported yet. ([LP: #2048473](https://launchpad.net/bugs/2
 
 GTK 4 apps (including the desktop wallpaper) do not display correctly with VirtualBox or VMWare with 3D Acceleration ([LP: #2061118](https://launchpad.net/bugs/2061118)).
 
-#### Incompatibility between TPM-backed Full Disk Encryption and Absolute
+#### Incompatibility between TPM-backed full disk encryption and Absolute
 
-TPM-backed Full Disk Encryption (FDE) has been introduced to enhance data security. However, it’s important to note that this feature is incompatible with Absolute (formerly Computrace) security software. If Absolute is enabled on your system, the machine will not boot post-installation when TPM-backed FDE is also enabled. Therefore, disabling Absolute from the BIOS is recommended to avoid booting issues.
+TPM-backed full disk encryption (TPM/FDE) has been introduced to enhance data security. However, it’s important to note that this feature is incompatible with the Absolute (formerly Computrace) security software.
 
-#### Hardware-Specific Kernel Module Requirements for TPM-backed Full Disk Encryption
+If Absolute is enabled on your system, the machine will not boot post-installation when TPM/FDE is also enabled. Therefore, disabling Absolute from the BIOS is recommended to avoid booting issues.
 
-TPM-backed Full Disk Encryption (FDE) requires a specific kernel snap which may not include certain kernel modules necessary for some hardware functionalities. A notable example is the `vmd` module required for NVMe RAID configurations. In scenarios where such specific kernel modules are indispensable, the hardware feature may need to be disabled in the BIOS (such as RAID) to ensure the continued availability of the affected hardware post-installation. If disabling in the BIOS is not an option, the related hardware will not be available post-installation with TPM-backed FDE enabled.
+#### Hardware-specific kernel module requirements for TPM-backed full disk encryption
+
+TPM-backed full disk encryption (TPM/FDE) requires a specific kernel snap which may not include certain kernel modules necessary for some hardware functionalities. A notable example is the `vmd` module required for NVMe RAID configurations.
+
+In scenarios where such specific kernel modules are indispensable, the hardware feature may need to be disabled in the BIOS (such as RAID) to ensure the continued availability of the affected hardware post-installation. If disabling in the BIOS is not an option, the related hardware will not be available post-installation with TPM/FDE enabled.
 
 #### Full-disk encryption
 
