@@ -239,6 +239,8 @@ linkcheck_ignore = [
     r"https://discourse\.lubuntu\.me/.*",
     r"https://downloads\.apache\.org/.*",
     r"https://www\.freedesktop\.org/.*",
+    r"https://gstreamer\.freedesktop\.org/.*",
+    r"https://linux-nfs\.org/wiki/.*",
     # Launchpad: bugs/commits may be private or deleted
     r"https://bugs\.launchpad\.net/.*",
     r"https://git\.launchpad\.net/.*",
