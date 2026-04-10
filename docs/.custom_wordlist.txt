@@ -964,6 +964,8 @@ texlive
 thermald
 Thinkpad
 Thinkplus
+thumbnailer
+thumbnailers
 thunderbird
 Tilaa
 timedatex
