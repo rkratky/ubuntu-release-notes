@@ -588,6 +588,19 @@ See [LP: #2142320](https://bugs.launchpad.net/ubuntu-release-notes/+bug/2142320)
 
 The `oracledb` and `zabbixagent` agents were replaced by the `oracle` and `zabbix-agent`, respectively. You might need to adjust your existing configuration.
 
+#### Microsoft Azure
+
+`Azure Disk Encryption` (ADE) is scheduled for retirement on September 15, 2028. A number of packages were historically pre-installed on Azure images to allow the enablement of ADE without requiring additional package installations. Due to its impending retirement, Ubuntu on Azure will no longer maintain the enablement of ADE without additional package installations. Accordingly, the following packages have been removed from one or more Ubuntu image-lines on Azure:
+
+`python3-parted`
+: This package is largely unsupported by its maintainers, imposing a potential security risk into the future. Its only known use was for the enablement of ADE. It is no longer pre-installed on any Ubuntu image on Azure.
+
+`python3-six`
+: The only known use of this package was for the enablement of ADE. It is no longer pre-installed on any Ubuntu image on Azure.
+
+`lsscsi`
+: This package was initially introduced to support ADE. It has been removed from all minimal Ubuntu image-lines to maintain the minimal footprint assertion. However, it remains a pre-installed package for all non-minimized Ubuntu images on Azure since it is a valuable debugging tool for individual instances and server deployments.
+
 <!--
 ### Development changes
 
