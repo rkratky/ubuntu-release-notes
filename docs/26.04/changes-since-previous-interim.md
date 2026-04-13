@@ -867,6 +867,8 @@ TPM-backed full disk encryption (TPM/FDE) has been introduced to enhance data se
 
 * Some potentially eligible systems might be detected as **ineligible** for TPM/FDE.
 
+* At boot, the PIN or passphrase prompt is set to the **keyboard layout** even if you set a custom layout on your system. To fix this problem, update to `snapd` 2.75.
+
 * If you **forget the passphrase or PIN** and you boot your system with the recovery key, you can't remove or replace the passphrase or PIN anymore. On subsequent boots, you have to continue using your recovery key.
 
 * **Disk re-encryption** is currently not supported.
