@@ -460,7 +460,11 @@ per-release changes and the related upstream annoucments.
 * qemu: The HPET device does not take the big QEMU lock anymore.
 * qemu: QEMU now supports loading multiple x509 cert+key identities (for transition to post-quantum cryptography)
 
-* The virt stack as a whole added a hardware enablement model.
+:::{versionadded} 26.04
+:::
+
+```{include} /reuse/26.04/virt-hwe-feature.txt
+```
 
 :::{versionadded} 25.10
 :::
