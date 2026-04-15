@@ -110,7 +110,7 @@ Finally several packages were updated to their latest upstream version to pick u
 
 Cryptography libraries have been updated to recent versions:
 
-* OpenSSL has been pudated to the latest upstream LTS [3.5.6](https://launchpad.net/ubuntu/+source/openssl) version
+* OpenSSL has been updated to the latest upstream LTS [3.5.6](https://launchpad.net/ubuntu/+source/openssl) version
 * GnuTLS to version 3.8.12
 * NSS to version [3.120](https://launchpad.net/ubuntu/+source/nss/2:3.120-1ubuntu2)
 * `libgcrypt` to version 1.12.0
@@ -604,7 +604,7 @@ IBM Z generation z14 (LinuxONE II) is still supported by Ubuntu Server 24.04 LTS
 
 The GNOME Online Accounts (GOA) service has removed Google Drive integration. As a result, you can no longer mount your Google Drive storage in the Files app.
 
-The feature was removed becase the `libgdata` library, which enabled the integration, has been unmaintained and posed a security risk.
+The feature was removed because the `libgdata` library, which enabled the integration, has been unmaintained and posed a security risk.
 
 You can still access Google Drive through your web browser.
 
