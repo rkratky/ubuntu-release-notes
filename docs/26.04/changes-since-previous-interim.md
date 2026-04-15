@@ -122,6 +122,13 @@ Cryptography libraries have been updated to recent versions:
 
 The GNOME desktop environment has been updated to version 50.
 
+#### Resources replaces System Monitor
+
+The [Resources](https://apps.gnome.org/Resources/) app now replaces the System Monitor app and the Power Statistics app in the GNOME environment.
+
+Resources enable you to monitor the utilization of your system resources, including the CPU, memory, GPU, network and storage and power usage. The app is written in the Rust programming language. It comes with a modern and accessible interface based on GTK 4 and `libadwaita`.
+
+
 #### GStreamer 1.28
 
 The GStreamer multimedia framework has been updated to [version 1.28](https://gstreamer.freedesktop.org/releases/1.28/).
