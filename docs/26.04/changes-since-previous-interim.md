@@ -328,7 +328,7 @@ The QEMU package was upgraded to version 10.2.1. Here is the important changes s
 
 * qemu: The HPET device does not take the big QEMU lock anymore.
 
-* qemu: QEMU now supports loading multiple x509 cert+key identities, to allow use of parallel certificates with different algorithms, needwed to facilitate the transition to post-quantum cryptography
+* qemu: QEMU now supports loading multiple x509 cert+key identities, to allow use of parallel certificates with different algorithms, needed to facilitate the transition to post-quantum cryptography
 
 * ARM
 

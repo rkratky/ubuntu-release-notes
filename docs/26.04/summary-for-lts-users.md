@@ -439,15 +439,15 @@ For the `containerd` and `runc` packages, we established a pattern to either kee
 
 ### Virtualization stack
 
-A stack as active as that of qemu, libvirt, edk2 and seabios had way too many
-great new features and fixes to list them all. The upgrades between each
+A stack as active as that of `qemu`, `libvirt`, `edk2` and `seabios` had way too
+many great new features and fixes to list them all. The upgrades between each
 interim release like {ref}`libvirt@24.10 <libvirt-24.10>`,
 {ref}`qemu@25.10 <qemu-25.04>` or {ref}`edk2@25.10 <edk2-25.10>`
 are already so huge they can only cover a selected high level summary.
 Each version adds various new emulated instructions, new cpu types and
 virtualized platforms which would is beyond the scope of this.
 Here are just a few to motivate you to check out all the other
-per-release changes and the related upstream annoucments.
+per-release changes and the related upstream announcements.
 
 :::{versionadded} 26.04
 :::
@@ -491,9 +491,9 @@ per-release changes and the related upstream annoucments.
 :::
 
 * qemu: `virtio-blk` device has gained true multiqueue support where different queues of a single disk can be processed by different I/O threads. This can improve scalability in cases where the guest submitted enough I/O to saturate the host CPU running a single I/O thread processing the virtio-blk requests. Multiple I/O threads can be configured using the new iothread-vq-mapping property.
-* qemu: can emulate various new RISC-V instructions like the Zacas, B, Zaamo, Zalrsc, Ztso extensions
+* qemu: can emulate various new RISC-V instructions like the `Zacas`, `Zaamo`, `Zalrsc` and `Ztso` extensions
 * libvirt: Now supports clusters in CPU topology.
-* libvirt: Introduces dynamicMemslots attribute for virtio-mem
+* libvirt: Introduces `dynamicMemslots` attribute for virtio-mem
 
 ### High availability and clustering
 
