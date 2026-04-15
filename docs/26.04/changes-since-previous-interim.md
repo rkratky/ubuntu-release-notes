@@ -297,19 +297,11 @@ virtualization stack of the following interim releases while otherwise staying o
 
 The libvirt package was upgraded to version 12.0.0. Here is the important changes since Ubuntu Questing:
 
-* Several new features have been added into the `bhyve` driver:
+* libvirt: improved firmware selection
 
-* Experimental NAT networking support using the Packet Filter (`pf`) firewall.
+* libvirt Add more statistics for block devices on QEMU domains
 
-* Querying domain block, interface, and memory statistics. Not all statistics fields are supported though.
-
-* SLIRP networking support
-
-* NVMe device support
-
-* `virtio-scsi` support
-
-* Initial ARM64 support
+* libvirt: Add support for NUMA affinity of PCI devices
 
 * Multi-GPU: Add support for NUMA affinity of PCI devices
 
@@ -333,15 +325,9 @@ Some additional notable changes:
 
 The QEMU package was upgraded to version 10.2.1. Here is the important changes since Ubuntu Questing:
 
-Upgrading Windows 11 makes the VM stop working and to fix this issue and ensure the migration path, we added new machine types for Resolute and old Ubuntu releases:
+* qemu: The HPET device does not take the big QEMU lock anymore.
 
-* `pc-i440fx-questing-v2` Ubuntu 25.10 PC v2 (i440FX + PIIX, + 10.1 machine, 1996)
-
-* `pc-i440fx-noble-v2`   Ubuntu 24.04 LTS PC v2 (i440FX + PIIX, `arch-caps` fix, 1996)
-
-* `pc-q35-noble-v2`      Ubuntu 24.04 LTS PC v2 (Q35 + ICH9, `arch-caps` fix, 2009)
-
-Other notable new features:
+* qemu: QEMU now supports loading multiple x509 cert+key identities, to allow use of parallel certificates with different algorithms, needwed to facilitate the transition to post-quantum cryptography
 
 * ARM
 
@@ -804,6 +790,19 @@ A noteworthy change in the packaging of Postfix is that **by default it is no lo
 #### `unbound` 1.24.2
 
 Update to version 1.24.2. See the [upstream changelog](https://github.com/NLnetLabs/unbound/releases/tag/release-1.24.2).
+
+#### Qemu - Handling Windows 11 upgrades
+
+* Upgrading [Windows 11 can make the VM stop working](https://bugs.launchpad.net/ubuntu/+source/qemu/+bug/2131822), to fix this issue and ensure the migration path, we added new machine types:
+
+* `pc-i440fx-questing-v2`
+* `pc-i440fx-noble-v2`
+* `pc-q35-noble-v2`
+
+This also affects the same guest on the related active releases, the CPU types with the fix have been provided there as well.
+Any newly started guest on these older releases will automatically pick up the new versions and now be able to migrate.
+Action is only needed if you specified them explicitly.
+26.04 and later is not affected right from the start.
 
 <!--
 ### Development fixes
