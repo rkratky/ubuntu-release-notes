@@ -676,6 +676,12 @@ The `oracledb` and `zabbixagent` agents were replaced by the `oracle` and `zabbi
 `lsscsi`
 : This package was initially introduced to support ADE. It has been removed from all minimal Ubuntu image-lines to maintain the minimal footprint assertion. However, it remains a pre-installed package for all non-minimized Ubuntu images on Azure since it is a valuable debugging tool for individual instances and server deployments.
 
+#### Google Cloud
+
+As all `AMD64` images are now built with `AMD64v3` the following CPU platforms (available on `N1` machine types only) are no longer supported:
+* Intel Ivy Bridge
+* Intel Sandy Bridge
+
 <!--
 ### Development changes
 
