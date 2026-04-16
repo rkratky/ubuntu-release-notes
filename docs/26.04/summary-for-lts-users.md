@@ -528,6 +528,8 @@ All Resolute 26.04 images are now built with `AMD64v3` by default. However, this
 * Intel Ivy Bridge
 * Intel Sandy Bridge
 
+Automatic in-place upgrades to Ubuntu Pro will be fixed in [ubuntu-pro-client](https://github.com/canonical/ubuntu-pro-client/pull/3532) (to be included in the next point release)
+
 ## Security
 
 ### New AppArmor sandboxing profiles
