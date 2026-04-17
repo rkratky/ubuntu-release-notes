@@ -499,24 +499,26 @@ Support for the PowerShell snap has been expanded to include the `arm64`, `s390x
 
 ## Enterprise
 
-### Updated `authd`
+### authd
 
-[authd](https://github.com/ubuntu/authd), Ubuntu's cloud authentication solution, has been updated:
+[authd](https://github.com/ubuntu/authd), Ubuntu's cloud authentication solution, is now available from an official Ubuntu repository and has a range of new features. Changes since 24.04 are detailed below:
 
-- Many fixes and improvements to the EntraID provider
-- New Google provider
-- Supports device registration with EntraID
-- authctl is a new command line tool to manage authd
-- Many improvements and important bug fixes such as UID/GID handling
+- authd can be installed directly from the Ubuntu archive (universe). For more information [read the blog](https://discourse.ubuntu.com/t/authd-enters-the-ubuntu-archive-in-26-04-lts/78193)
+- The new [Google broker](https://snapcraft.io/authd-google) supports authentication through Google IAM
+- Device registration is supported when authenticating with Microsoft Entra ID
+- `authctl` is provided as a command line tool for managing authd
+- A generic OpenID Connect (OIDC) broker for authd is available. For more information [read the blog](https://ubuntu.com/blog/more-identity-providers-ubuntu-generic-broker)
+- Device ownership support lets you automatically assign a device owner and restrict login access
+- A new setting allows you to enforce an access check with the identity provider during login
+- New pages on [security](https://documentation.ubuntu.com/authd/stable-docs/explanation/security/), [deployment](https://documentation.ubuntu.com/authd/stable-docs/reference/#deployment), and [authctl](https://documentation.ubuntu.com/authd/stable-docs/reference/cli/) were added to the [docs](https://documentation.ubuntu.com/authd/en/stable-docs/)
 
-### New `authd` documentation
+### ADSys
 
-New [authd documentation](https://documentation.ubuntu.com/authd/en/stable/) has been published.
+The Active Directory Group Policy client for Ubuntu has been updated since 24.04 to:
 
-### Updated ADSys
-
-The Active Directory Group Policy client for Ubuntu supports the latest Polkit and comes with improvements and bug fixes to certificates enrollment.
-
+- Fix invalid headers for newer polkit versions
+- Allow searching GPO list by `userPrincipalName`
+- Include a new [tutorial](https://documentation.ubuntu.com/adsys/latest/tutorial/getting-started/) and [glossary](https://documentation.ubuntu.com/adsys/latest/reference/glossary/)
 
 ## Cloud
 
