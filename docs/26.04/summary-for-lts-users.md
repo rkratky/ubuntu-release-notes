@@ -624,6 +624,30 @@ The OpenSSL library comes with several notable updates since Ubuntu 24.04:
 
 For more information, see [Post Quantum Support in the upcoming 26.04 LTS](https://discourse.ubuntu.com/t/post-quantum-support-in-the-upcoming-26-04-lts/76840).
 
+### Intel® Trusted Domain Extensions (TDX) host support
+:::{versionadded} 25.10
+:::
+
+Intel® Trusted Domain Extensions (TDX) is a hardware-based confidential computing technology that isolates virtual machines into secure Trusted Domains (TDs). TDX protects guest workloads from the hypervisor, host OS, and other VMs by encrypting memory and enforcing strong, hardware-level isolation.
+
+TDX is designed for cloud and virtualized environments where workload confidentiality must be preserved in shared, multi-tenant infrastructure.
+
+Benefits for the user:
+
+- Isolated multi-tenant compute: Ensures VM memory and data remain confidential even in shared cloud environments.
+- Secure cloud migration: Enables customers to move sensitive workloads from on-premises environments to the cloud with confidence.
+- Reduced data-breach risk: Hardware-based isolation significantly limits attack surface exposure.
+
+Supported use cases:
+
+- Confidential cloud workloads
+- Secure telco and enterprise virtual machines
+- Financial and healthcare secure workloads
+
+Ubuntu supports Intel TDX for both host and guest operating systems. Guest support is available from Ubuntu 24.04 LTS onwards, while host support began with Ubuntu 25.10.
+
+To learn how to use Intel TDX, see <https://ubuntu.com/server/docs/how-to/virtualisation/intel-tdx/>.
+
 ### cargo-auditable
 :::{versionadded} 25.10
 :::
