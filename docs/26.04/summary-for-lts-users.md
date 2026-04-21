@@ -676,6 +676,8 @@ The `linux-generic` kernel for ARM64 provides broader compatibility for ARM64 de
 ### A new boot layout for Raspberry Pi
 :::{versionadded} 25.10
 :::
+:::{versionchanged} 26.04
+:::
 
 A new layout of the boot partition is introduced to enhance the reliability of the boot process ([LP: #2116266](https://launchpad.net/bugs/2116266)). This will automatically "test" new boot assets written to the boot partition before committing them as the current "known good" set. See the [call for testing](https://discourse.ubuntu.com/t/call-for-testing-a-b-boot-on-raspberry-pi/64173) for more information, or [the blog post](https://waldorf.waveform.org.uk/2025/pull-yourself-up-by-your-bootstraps.html) covering the feature for the full details (including advice on how to opt-out of this feature, where required). The {manpage}`piboot-try(1)` man-page may also be consulted for advanced operations.
 
@@ -686,10 +688,12 @@ For Pi 3, 3+, CM3+, and Zero 2W
 : No action required, the boot firmware is in the image itself.
 
 For Pi 4, 400, CM4
-: Your boot firmware *must* be dated no earlier than **2022-11-25**. To check, run `sudo rpi-eeprom-update`. If your firmware is dated earlier, using Ubuntu 24.04 LTS (Noble Numbat) or later, run `sudo rpi-eeprom-update -a` and reboot.
+: Your boot firmware *must* be dated no earlier than **2022-11-25**.
 
 For Pi 5, 500, CM5
-: No action required, all firmware since release of the platform are compatible.
+: Your boot firmware *must* be dated no earlier than **2025-02-11**.
+
+To check, run `sudo rpi-eeprom-update`. If your firmware is dated earlier, using Ubuntu 24.04 LTS (Noble Numbat) or later, run `sudo rpi-eeprom-update -a` and reboot.
 :::
 
 ### Raspberry Pi is based on the minimal image
