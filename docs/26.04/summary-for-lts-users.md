@@ -587,6 +587,19 @@ All Resolute 26.04 images are now built with `AMD64v3` by default. However, this
 
 Automatic in-place upgrades to Ubuntu Pro will be fixed in [ubuntu-pro-client](https://github.com/canonical/ubuntu-pro-client/pull/3532) (to be included in the next point release)
 
+### Amazon Web Services (AWS)
+
+This transition impacts several Previous Generation Instance families. While AWS maintains these for legacy optimizations, they do not meet the microarchitecture requirements for Resolute Raccoon.
+
+The following instance families are no longer supported starting with version 26.04:
+* General Purpose: M1, M2, M3, M4
+* Compute Optimized: C1, C3, C4
+* Memory Optimized: R3, R4
+* Storage/Accelerated: I2, G3, P2, P3, P3dn
+
+Learn more about the [AWS Previous Generation Instances](https://docs.aws.amazon.com/ec2/latest/instancetypes/pg.html) to identify migration paths to current-generation instances
+
+
 ## Security
 
 ### New AppArmor sandboxing profiles
