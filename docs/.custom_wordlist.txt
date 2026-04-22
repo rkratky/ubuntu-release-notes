@@ -572,6 +572,7 @@ memlock
 metacharacters
 metapackage
 micmute
+microarchitecture
 microversion
 microvm
 middleware
