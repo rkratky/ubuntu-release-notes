@@ -650,7 +650,13 @@ For more details refer to [NVIDIA's documentation](https://download.nvidia.com/X
 
 ### Support for new Intel® integrated and discrete GPUs
 
-This release brings full support for Intel® Core™ Ultra Xe2 and Xe3 integrated Intel® Arc™ graphics, as well as Intel® Arc™ B580, B570, Pro B50 and B60 “Battlemage” discrete GPUs
+This release brings full support for the following Intel® Arc™ “Battlemage” and “Celestial” GPUs:
+
+* Integrated:
+  * Intel® Core™ Ultra Xe2 and Xe3
+* Discrete:
+  * Intel® Arc™ 5 B570 and B580
+  * Intel® Arc™ Pro B50, B60, B65, and B70
 
 Moreover, the following features are also included:
 
