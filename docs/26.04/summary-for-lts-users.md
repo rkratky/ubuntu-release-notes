@@ -954,6 +954,22 @@ The core utilities of the operating system are now provided by the [`rust-coreut
 Since `rust-coreutils` are not necessarily fully compatible yet, we continue to provide the classic GNU utilities as well. You can switch back and forth between them.
 
 
+### Architecture variants and `amd64v3`
+:::{versionadded} 25.10
+:::
+
+Ubuntu now has the ability balance hardware compatibility and fuller utilization of modern hardware by building multiple versions or "variants" of a package. The first variant we are introducing is `amd64v3`, which is optimized for the `x86-64-v3` [microarchitecture level](https://en.wikipedia.org/wiki/X86-64#Microarchitecture_levels).
+
+For maximum compatibility, this variant is opt-in by default. If you are running on compatible hardware (and if your AMD64 machine was built in the last 10 years or so, you probably are) you can upgrade to `amd64v3` packages with the following commands:
+
+```bash
+echo 'APT::Architecture-Variants "amd64v3";' | sudo tee /etc/apt/apt.conf.d/99enable-amd64v3
+sudo apt update
+sudo apt upgrade
+```
+
+For details, see the announcement: [Introducing architecture variants: amd64v3 now available in Ubuntu 25.10](https://discourse.ubuntu.com/t/introducing-architecture-variants-amd64v3-now-available-in-ubuntu-25-10/71312).
+
 ### Linux kernel 7.0
 
 For users running the GA generic stack, the Linux kernel has been updated from version 6.8 to 7.0. For users running the Hardware Enablement (HWE) stack, the Linux kernel has been updated from version 6.17 (25.10 backport) to 7.0.
