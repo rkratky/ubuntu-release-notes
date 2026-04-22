@@ -1,19 +1,19 @@
-The Ubuntu 26.04 Resolute release introduces a new Hardware Enablement (HWE)
+The Ubuntu 26.04 LTS (Resolute) release introduces a new Hardware Enablement (HWE)
 virtualization stack, which will be continuously updated to align with the
 latest versions delivered in upcoming interim releases.
 
-This virtualization stack is delivered like the [HWE kernel](https://canonical-kernel-docs.readthedocs-hosted.com/reference/hwe-kernels/),
-using them together is recommended but not a strict requirement.
+This virtualization stack is delivered like the [HWE kernel](https://canonical-kernel-docs.readthedocs-hosted.com/reference/hwe-kernels/).
+Using them together is recommended but not a strict requirement.
 
 This allows the user to benefit from the latest capabilities of
 the virtualization stack while otherwise staying on the well established
 Ubuntu LTS.
 
 This virt-hwe stack is composed of the following source packages:
- - qemu-hwe
- - libvirt-hwe
- - seabios-hwe
- - edk2-hwe
+ - `qemu-hwe`
+ - `libvirt-hwe`
+ - `seabios-hwe`
+ - `edk2-hwe`
 
 Initially those are mostly identical to the base packages, but twice a year
 they will move to a newer release.

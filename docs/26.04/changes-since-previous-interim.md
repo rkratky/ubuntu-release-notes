@@ -292,17 +292,17 @@ For a comprehensive list of changes, please check the [upstream release notes](h
 ```{include} /reuse/26.04/virt-hwe-feature.txt
 ```
 
-In addition, the virtualization stack got following updates since Ubuntu Questing 25.10:
+In addition, the virtualization stack got following updates since Ubuntu 25.10 (Questing):
 
 #### libvirt
 
 The libvirt package was upgraded to version 12.0.0. Here is the important changes since Ubuntu Questing:
 
-* libvirt: improved firmware selection
+* libvirt: Better firmware selection
 
-* libvirt Add more statistics for block devices on QEMU domains
+* libvirt: More statistics for block devices on QEMU domains
 
-* libvirt: Add support for NUMA affinity of PCI devices
+* libvirt: Support for NUMA affinity of PCI devices
 
 * Multi-GPU: Add support for NUMA affinity of PCI devices
 
@@ -328,7 +328,7 @@ The QEMU package was upgraded to version 10.2.1. Here is the important changes s
 
 * qemu: The HPET device does not take the big QEMU lock anymore.
 
-* qemu: QEMU now supports loading multiple x509 cert+key identities, to allow use of parallel certificates with different algorithms, needed to facilitate the transition to post-quantum cryptography
+* qemu: Loading multiple x509 cert+key identities to allow the use of parallel certificates with different algorithms. This is needed to facilitate the transition to post-quantum cryptography.
 
 * ARM
 

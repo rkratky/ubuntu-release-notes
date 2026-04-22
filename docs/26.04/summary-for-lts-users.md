@@ -439,26 +439,26 @@ For the `containerd` and `runc` packages, we established a pattern to either kee
 
 ### Virtualization stack
 
-A stack as active as that of `qemu`, `libvirt`, `edk2` and `seabios` had way too
+A stack as active as that of `qemu`, `libvirt`, `edk2`, and `seabios` had too
 many great new features and fixes to list them all. The upgrades between each
 interim release like {ref}`libvirt@24.10 <libvirt-24.10>`,
-{ref}`qemu@25.10 <qemu-25.04>` or {ref}`edk2@25.10 <edk2-25.10>`
-are already so huge they can only cover a selected high level summary.
-Each version adds various new emulated instructions, new cpu types and
-virtualized platforms which would is beyond the scope of this.
+{ref}`qemu@25.10 <qemu-25.04>`, or {ref}`edk2@25.10 <edk2-25.10>`
+are already so huge they can only cover a selected high-level summary.
+Each version adds various new emulated instructions, new CPU types and
+virtualized platforms, which would is beyond the scope of release notes.
 Here are just a few to motivate you to check out all the other
 per-release changes and the related upstream announcements.
 
 :::{versionadded} 26.04
 :::
 
-* libvirt: improved firmware selection
-* libvirt Add more statistics for block devices on QEMU domains
-* libvirt: Add support for NUMA affinity of PCI devices
-* libvirt+qemu: Support NVIDIA Multi-Instance GPU (MIG) configurations
+* libvirt: Better firmware selection
+* libvirt More statistics for block devices on QEMU domains
+* libvirt: Support for NUMA affinity of PCI devices
+* libvirt+qemu: Support for NVIDIA Multi-Instance GPU (MIG) configurations
 * qemu: Hyper-V host model mode
-* qemu: The HPET device does not take the big QEMU lock anymore.
-* qemu: QEMU now supports loading multiple x509 cert+key identities (for transition to post-quantum cryptography)
+* qemu: The HPET device does not take the big QEMU lock anymore
+* qemu: Support for loading multiple x509 cert+key identities (for transition to post-quantum cryptography)
 
 :::{versionadded} 26.04
 :::
@@ -470,30 +470,30 @@ per-release changes and the related upstream announcements.
 :::
 
 * libvirt: ppc64 POWER11 processor support
-* libvirt: Allow control over QEMU TLS priority strings
-* libvirt: Add support for NVMe disks
-* libvirt: add support for AMD IOMMU device
+* libvirt: Control over QEMU TLS priority strings
+* libvirt: Support for NVMe disks
+* libvirt: Support for AMD IOMMU device
 * libvirt+qemu+edk2: Support for Intel TDX
 * qemu: Support for the [RVA23 Profile](https://riscv.org/blog/risc-v-rva23-a-major-milestone/)
 * qemu: Support for s390x generation 17 mainframe CPUs
-* qemu: `virtio-scsi` has gained true multiqueue support
+* qemu: Support for true `virtio-scsi` multiqueue
 
 :::{versionadded} 25.04
 :::
 
 * libvirt: Zero block detection for non-shared-storage migration
-* libvirt: Add support for versioned qemu CPU models
+* libvirt: Support for versioned qemu CPU models
 * libvirt+qemu+edk2: Support for AMD `SEV-SNP`
-* qemu: Support RISC-V privilege 1.13 spec
-* qemu: Arm KVM-based VMs can now support MTE
+* qemu: Support for RISC-V privilege 1.13 spec
+* qemu: Support for MTE on ARM KVM-based VMs
 
 :::{versionadded} 24.10
 :::
 
-* qemu: `virtio-blk` device has gained true multiqueue support where different queues of a single disk can be processed by different I/O threads. This can improve scalability in cases where the guest submitted enough I/O to saturate the host CPU running a single I/O thread processing the virtio-blk requests. Multiple I/O threads can be configured using the new iothread-vq-mapping property.
-* qemu: can emulate various new RISC-V instructions like the `Zacas`, `Zaamo`, `Zalrsc` and `Ztso` extensions
-* libvirt: Now supports clusters in CPU topology.
-* libvirt: Introduces `dynamicMemslots` attribute for virtio-mem
+* qemu: `virtio-blk` device has gained true multiqueue support where different queues of a single disk can be processed by different I/O threads. This can improve scalability in cases where the guest submitted enough I/O to saturate the host CPU running a single I/O thread processing the virtio-blk requests. Multiple I/O threads can be configured using the new `iothread-vq-mapping` property.
+* qemu: Support for emulating various new RISC-V instructions like the `Zacas`, `Zaamo`, `Zalrsc`, and `Ztso` extensions
+* libvirt: Support for clusters in CPU topology.
+* libvirt: New `dynamicMemslots` attribute for virtio-mem
 
 ### High availability and clustering
 
