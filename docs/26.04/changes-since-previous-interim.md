@@ -1000,6 +1000,9 @@ The Ubuntu Cloud Archive is not affected by this bug.
 
 * Network interfaces left unconfigured at install time are assumed to be configured via dhcp4. If this doesn’t happen (for example, because the interface is physically not connected) the boot process will block and wait for a few minutes ([LP: #2063331](https://bugs.launchpad.net/subiquity/+bug/2063331)). This can be fixed by removing the extra interfaces from `/etc/netplan/50-cloud-init.conf` or by marking them as `optional: true`. Cloud-init is disabled on systems installed from ISO images, so settings will persist.
 
+* It came to our attention recently that a [new version of Ventoy](https://github.com/ventoy/Ventoy/releases/tag/v1.1.11) was just released and has broken the ability to install Ubuntu.
+While this is not strictly a 26.04 installer issue, we would like to recommend people using Ventoy to downgrade to version 1.1.10 or to flash the ISO directly to a USB drive, as instructed [in the Ubuntu documentation](https://ubuntu.com/tutorials/install-ubuntu-desktop#3-create-a-bootable-usb-stick).
+
 ### Cloud issues
 
 #### Google cloud
