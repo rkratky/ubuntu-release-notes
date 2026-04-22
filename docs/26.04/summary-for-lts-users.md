@@ -22,7 +22,7 @@ The following is an overview of the major changes.
 
 ### GNOME 50
 
-The GNOME desktop environment has been updated to version 50. Notable changes since GNOME 46 found in  Ubuntu 24.04 LTS include the following:
+The GNOME desktop environment has been updated to version 50. Notable changes since GNOME 46 found in Ubuntu 24.04 LTS include the following:
 
 :::{rubric} From GNOME 47
 :::
@@ -42,7 +42,18 @@ The GNOME desktop environment has been updated to version 50. Notable changes si
 :::{rubric} From GNOME 48
 :::
 
-todo
+* Notifications are now grouped by application to prevent the list from getting too long.
+* GNOME now includes the [triple buffering](https://discourse.ubuntu.com/t/triple-buffering-a-debrief/56314) feature from Ubuntu, improving responsiveness.
+* Certain core GNOME components now use less CPU and memory.
+* The image viewer now supports simple image editing.
+* Digital Wellbeing features are now available, including screen time limits and break reminders.
+* A new battery health preservation option is available.
+* The Calendar app now supports managing events across multiple timezones.
+* High Dynamic Range (HDR) output is now available for displays that support it.
+* The design of the Text Editor app has been improved.
+* Apps can now set up system-wide keyboard shortcuts.
+* New windows are now placed in the center of the screen by default.
+* Screen reader shortcuts, such as the {kbd}`CapsLock` Orca modifier, now function correctly in the Wayland session.
 
 :::{rubric} From GNOME 49
 :::
