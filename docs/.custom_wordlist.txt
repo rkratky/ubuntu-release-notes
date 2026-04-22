@@ -953,10 +953,13 @@ Taroko
 Tauros
 tcmalloc
 tcpdump
+TD
+TDs
 teardown
 Techboard
 tecla
 Tegra
+telco
 Telit
 tempfile
 Temujin
