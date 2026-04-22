@@ -882,10 +882,6 @@ There is a bug ([LP: #2104316](https://bugs.launchpad.net/ubuntu-power-systems/+
 
 It has been reported that cloud-init may fail to upgrade properly in the Oracular to Plucky upgrade path, see [LP: #2104316](https://bugs.launchpad.net/ubuntu-power-systems/+bug/2104297).
 
-#### ZFS with cryptoswap
-
-ZFS with Encryption on Ubuntu 24.10 will [fail to activate the cryptoswap partition](https://bugs.launchpad.net/ubuntu/+source/subiquity/+bug/2084089).  This affects both new installs and upgrades.  We expect to address this post-release with an archive update.
-
 #### I/O scheduler
 
 A bug prevents the I/O scheduler from being reset to “none” ([LP: #2083845](https://bugs.launchpad.net/bugs/2083845)): the fix is already in Linux v6.11.2, and will be part of the first SRU kernel.
