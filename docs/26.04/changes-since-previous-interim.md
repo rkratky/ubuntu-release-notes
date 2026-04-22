@@ -887,10 +887,6 @@ There is a bug ([LP: #2104316](https://bugs.launchpad.net/ubuntu-power-systems/+
 
 It has been reported that cloud-init may fail to upgrade properly in the Oracular to Plucky upgrade path, see [LP: #2104316](https://bugs.launchpad.net/ubuntu-power-systems/+bug/2104297).
 
-#### ZFS with cryptoswap
-
-ZFS with Encryption on Ubuntu 24.10 will [fail to activate the cryptoswap partition](https://bugs.launchpad.net/ubuntu/+source/subiquity/+bug/2084089).  This affects both new installs and upgrades.  We expect to address this post-release with an archive update.
-
 #### I/O scheduler
 
 A bug prevents the I/O scheduler from being reset to “none” ([LP: #2083845](https://bugs.launchpad.net/bugs/2083845)): the fix is already in Linux v6.11.2, and will be part of the first SRU kernel.
@@ -1000,8 +996,6 @@ The Ubuntu Cloud Archive is not affected by this bug.
 
 #### Installer
 
-On systems booting via U-Boot, U-Boot should be updated to the current Plucky version before installation as subiquity does not run flash-kernel and grub-update during the installation. So for first boot the device-tree from U-Boot will be used.
-
 * In some situations, it is acceptable to proceed with an offline installation when the mirror is inaccessible. In this scenario, it is advised to use:
 
     ```yaml
@@ -1010,6 +1004,10 @@ On systems booting via U-Boot, U-Boot should be updated to the current Plucky ve
     ```
 
 * Network interfaces left unconfigured at install time are assumed to be configured via dhcp4. If this doesn’t happen (for example, because the interface is physically not connected) the boot process will block and wait for a few minutes ([LP: #2063331](https://bugs.launchpad.net/subiquity/+bug/2063331)). This can be fixed by removing the extra interfaces from `/etc/netplan/50-cloud-init.conf` or by marking them as `optional: true`. Cloud-init is disabled on systems installed from ISO images, so settings will persist.
+
+* It came to our attention recently that a [new version of Ventoy](https://github.com/ventoy/Ventoy/releases/tag/v1.1.11) was just released and has broken the ability to install Ubuntu.
+
+    While this is not strictly a 26.04 installer issue, we recommend people using Ventoy to downgrade to version 1.1.10 or to flash the ISO directly to a USB drive, as instructed [in the Ubuntu documentation](https://documentation.ubuntu.com/desktop/en/26.04/how-to/create-a-bootable-usb-stick/).
 
 ### Cloud issues
 
