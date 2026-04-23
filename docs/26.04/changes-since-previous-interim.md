@@ -1024,7 +1024,7 @@ This issue was also present in Ubuntu 25.10.
 Find the release notes for the official flavors at the following links:
 
 * [Edubuntu Release Notes](https://discourse.ubuntu.com/t/edubuntu-26-04-beta-released/)
-* [Kubuntu Release Notes](https://wiki.ubuntu.com/PluckyPuffin/ReleaseNotes/Kubuntu)
+* [Kubuntu Release Notes](https://kubuntu.org/news/kubuntu-26-04-release-notes/)
 * [Lubuntu Release Notes](https://lubuntu.me/lubuntu-25-04-p-p-released/)
 * [Ubuntu Budgie Release Notes](https://ubuntubudgie.org/blog/ubuntu-budgie-2604-lts-release-notes/)
 * [Ubuntu MATE Release Notes](https://ubuntu-mate.org/blog/ubuntu-mate-p-p-release-notes/)
