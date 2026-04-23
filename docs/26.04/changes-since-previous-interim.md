@@ -29,31 +29,31 @@ For details, see the [upstream release notes](https://release.gnome.org/50/).
 ```{include} /reuse/26.04/gnome-resources.txt
 ```
 
-##### Added GNOME Shell search provider for snap applications
+#### Added GNOME Shell search provider for snap applications
 
 GNOME Shell global search gained the ability to search for the available snap
 applications that match the search criteria.
 
 This feature can be disabled in the Search panel of the Settings app.
 
-##### Added GNOME Shell search provider for web search
+#### Added GNOME Shell search provider for web search
 
 It's now possible to initiate a web search with the user default browser from
 the GNOME Shell global search in the overview.
 
 This feature can be disabled in the Search panel of the Settings app.
 
-##### Accessibility improvements and fixes
+#### Accessibility improvements and fixes
 
 On top of the upstream improvements, the ubuntu extensions and have been
 improved to address better various accessibility requirements
 
-##### Yaru theme updates
+#### Yaru theme updates
 
 [Yaru theme](https://github.com/ubuntu/yaru) got major updates gaining a look
 closer to the upstream one, and with lots icon updates.
 
-##### Improved integration with snap applications
+#### Improved integration with snap applications
 
 Snap applications using [XDG Desktop Portals](https://flatpak.github.io/xdg-desktop-portal/) are now better integrated into the desktop, and users can
 fully manage their access permissions and be able to any resource outside the
