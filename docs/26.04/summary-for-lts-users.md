@@ -74,12 +74,9 @@ The GNOME desktop environment has been updated to version 50. Notable changes si
 :::
 
 * You can now set an application to start automatically after login in {menuselection}`Settings --> Apps`.
-* Fractional scaling factors are now optimized so as to minimize blur.
+* Fractional scaling is now enabled by default. Fractional scaling factors have been optimized so as to minimize blur.
 * The default monospace font size has been reduced to match the default user interface font size. The monospace font is used in terminals and similar applications.
 * The [Sysprof](https://apps.gnome.org/Sysprof/) app is installed by default as a new system utility. This makes it easier to discover performance issues in your apps.
-* New parental controls
-* Fractional scaling enabled by default
-* HDR and VRR (Variable Refresh Rate) support
 
 For details, see the upstream release notes: [GNOME 47](https://release.gnome.org/47/), [GNOME 48](https://release.gnome.org/48/), [GNOME 49](https://release.gnome.org/49/) and [GNOME 50](https://release.gnome.org/50/).
 
