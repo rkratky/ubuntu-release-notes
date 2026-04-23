@@ -1133,19 +1133,3 @@ This release includes the following known vulnerabilities. Please, review their 
 * [CVE-2026-35373](https://www.cve.org/CVERecord?id=CVE-2026-35373)
 * [CVE-2026-35374](https://www.cve.org/CVERecord?id=CVE-2026-35374)
 * [CVE-2026-35377](https://www.cve.org/CVERecord?id=CVE-2026-35346)
-
-
-## Official flavors
-
-Find the release notes for the official flavors at the following links:
-
-* [Edubuntu Release Notes](https://discourse.ubuntu.com/t/edubuntu-26-04-beta-released/)
-* [Kubuntu Release Notes](https://wiki.ubuntu.com/PluckyPuffin/ReleaseNotes/Kubuntu)
-* [Lubuntu Release Notes](https://lubuntu.me/lubuntu-25-04-p-p-released/)
-* [Ubuntu Budgie Release Notes](https://ubuntubudgie.org/blog/ubuntu-budgie-2604-lts-release-notes/)
-* [Ubuntu MATE Release Notes](https://ubuntu-mate.org/blog/ubuntu-mate-p-p-release-notes/)
-* [Ubuntu Studio Release Notes](https://discourse.ubuntu.com/t/ubuntu-studio-26.04-release-notes/)
-* [Xubuntu Release Notes](https://xubuntu.org/releasedocs/26.04/release-notes/)
-* [Ubuntu Unity Release Notes](https://ubuntuunity.org/posts/ubuntu-unity-2604-release-notes/)
-* [Ubuntu Kylin Release Notes](https://ubuntukylin.com/news/ubuntukylin2604-en.html)
-* [Ubuntu Cinnamon Release Notes](https://ubuntucinnamon.org/?p=1348)
