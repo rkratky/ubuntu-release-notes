@@ -598,6 +598,16 @@ per-release changes and the related upstream announcements.
 
 * Pacemaker was updated to version 3. All new features and breaking changes are described in the [upstream release notes](https://projects.clusterlabs.org/w/projects/pacemaker/pacemaker_3.0_changes/).
 
+### Installer
+
+The Subiquity installer has been updated. See the Subiquity release notes on GitHub:
+
+- [24.08.1](https://github.com/canonical/subiquity/releases/tag/24.08.1)
+- [24.10.1](https://github.com/canonical/subiquity/releases/tag/24.10.1)
+- [25.04](https://github.com/canonical/subiquity/releases/tag/25.04)
+- [25.10](https://github.com/canonical/subiquity/releases/tag/25.10)
+- [26.04](https://github.com/canonical/subiquity/releases/26.04)
+
 ## WSL
 
 ### Ubuntu Insights
