@@ -1061,6 +1061,22 @@ Some particular hardware (e.g. Thinkpad x201) might have issues ([general freeze
 
 * On server images, re-authentication to WiFi APs when regulatory domain is set result in `dmesg` spam to the console ([LP: #2063365](https://launchpad.net/bugs/2063365))
 
+#### Custom partitioning on s390x might fail
+
+On the `s390x` architecture, custom partitioning for Direct-Access Storage Devices (DASD) with the Extended Count Key Data (ECKD) format using the `ext4` file system might fail.
+
+The installation might fail in the following scenario:
+
+- Several partitions are specified, and not just the root partition.
+- The root partition isn't the last one. Note that a DASD ECKD disk supports up to three possible partitions.
+- The `ext4` file system is used for the root partition.
+
+To work around the issue, ensure that the root partition is specified as the last partition or the only partition. For example, this layout works:
+
+- 1st partition: `/boot`
+- 2nd partition: `swap`
+- 3rd partition: `/` (`root`)
+
 #### Netboot installs
 
 There is a bug ([LP: #2104316](https://bugs.launchpad.net/ubuntu-power-systems/+bug/2104297)) in the *beta* images that prevents netboot installs in some scenarios.
@@ -1127,4 +1143,3 @@ Find the release notes for the official flavors at the following links:
 * [Ubuntu Unity Release Notes](https://ubuntuunity.org/posts/ubuntu-unity-2604-release-notes/)
 * [Ubuntu Kylin Release Notes](https://ubuntukylin.com/news/ubuntukylin2604-en.html)
 * [Ubuntu Cinnamon Release Notes](https://ubuntucinnamon.org/?p=1348)
-
