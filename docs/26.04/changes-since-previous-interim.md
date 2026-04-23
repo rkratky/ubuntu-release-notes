@@ -29,44 +29,35 @@ For details, see the [upstream release notes](https://release.gnome.org/50/).
 ```{include} /reuse/26.04/gnome-resources.txt
 ```
 
-#### Added GNOME Shell search provider for snap applications
+#### Added a GNOME Shell search provider for snap applications
 
-GNOME Shell global search gained the ability to search for the available snap
-applications that match the search criteria.
+The GNOME Shell global search gained the ability to search for the available snap applications that match the search criteria.
 
 This feature can be disabled in the Search panel of the Settings app.
 
-#### Added GNOME Shell search provider for web search
+#### Added a GNOME Shell search provider for web search
 
-It's now possible to initiate a web search with the user default browser from
-the GNOME Shell global search in the overview.
+You can now initiate a web search with your default browser from the GNOME Shell global search in the overview.
 
 This feature can be disabled in the Search panel of the Settings app.
 
 #### Accessibility improvements and fixes
 
-On top of the upstream improvements, the ubuntu extensions and have been
-improved to address better various accessibility requirements
+On top of the upstream improvements, the Ubuntu extensions have been improved to better address various accessibility requirements.
 
 #### Yaru theme updates
 
-[Yaru theme](https://github.com/ubuntu/yaru) got major updates gaining a look
-closer to the upstream one, and with lots icon updates.
+The [Yaru theme](https://github.com/ubuntu/yaru) has moved closer to the looks of the upstream GNOME theme. It has also received many icon updates.
 
 #### Improved integration with snap applications
 
-Snap applications using [XDG Desktop Portals](https://flatpak.github.io/xdg-desktop-portal/) are now better integrated into the desktop, and users can
-fully manage their access permissions and be able to any resource outside the
-confinement in a natural way.
+Snap applications using [XDG Desktop Portals](https://flatpak.github.io/xdg-desktop-portal/) are now better integrated into the desktop. Users can fully manage their access permissions and reach resources outside of the application's confinement in a natural way.
 
 In particular:
 
-* It's possible to open files or directories located in any path of the system
-  with other desktop applications (for example it's possible to open any file
-  with the file-manager using a snap application, wherever it is located, and
-  both with explicit open or via drang-and-drop).
-* It's possible to use Camera, Notification, USB and other XDG Desktop portals
-* Snap application portal permissions can be controlled in GNOME Settings
+* It's possible to open files or directories located in any path of the system with other desktop applications. For example, it's possible to open any file regardless of its location with the file manager using a snap application. This applies both to opening the file explicitly and using drag-and-drop.
+* It's possible to use Camera, Notification, USB and other XDG Desktop portals.
+* Snap application portal permissions can be controlled in GNOME Settings.
 
 #### A new color palette in the terminal
 
@@ -90,7 +81,7 @@ This change is part of creating a new release upgrade mode for GNOME Initial Set
 
 #### Fingerprint improvements
 
-[libfprint](https://gitlab.freedesktop.org/libfprint/libfprint/) now support drivers using the [Secure Device Connection Protocol](https://github.com/microsoft/SecureDeviceConnectionProtocol) (for [TOD drivers](https://gitlab.freedesktop.org/3v1n0/libfprint/-/releases/v1.95.1+tod1)) and many new devices.
+The [libfprint](https://gitlab.freedesktop.org/libfprint/libfprint/) library now supports drivers using the [Secure Device Connection Protocol](https://github.com/microsoft/SecureDeviceConnectionProtocol) (for [TOD drivers](https://gitlab.freedesktop.org/3v1n0/libfprint/-/releases/v1.95.1+tod1)) and many new devices.
 
 ### Server features
 
