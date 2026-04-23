@@ -992,6 +992,22 @@ As reported in a [Linux mailing list](https://lore.kernel.org/lkml/2026040319194
 
     While this is not strictly a 26.04 installer issue, we recommend people using Ventoy to downgrade to version 1.1.10 or to flash the ISO directly to a USB drive, as instructed [in the Ubuntu documentation](https://documentation.ubuntu.com/desktop/en/26.04/how-to/create-a-bootable-usb-stick/).
 
+#### Custom partitioning on s390x might fail
+
+On the `s390x` architecture, custom partitioning for Direct-Access Storage Devices (DASD) with the Extended Count Key Data (ECKD) format using the `ext4` file system might fail.
+
+The installation might fail in the following scenario:
+
+- Several partitions are specified, and not just the root partition.
+- The root partition isn't the last one. Note that a DASD ECKD disk supports up to three possible partitions.
+- The `ext4` file system is used for the root partition.
+
+To work around the issue, ensure that the root partition is specified as the last partition or the only partition. For example, this layout works:
+
+- 1st partition: `/boot`
+- 2nd partition: `swap`
+- 3rd partition: `/` (`root`)
+
 ### Cloud issues
 
 #### Google cloud
@@ -1106,4 +1122,3 @@ Find the release notes for the official flavors at the following links:
 * [Ubuntu Unity Release Notes](https://ubuntuunity.org/posts/ubuntu-unity-2604-release-notes/)
 * [Ubuntu Kylin Release Notes](https://ubuntukylin.com/news/ubuntukylin2604-en.html)
 * [Ubuntu Cinnamon Release Notes](https://ubuntucinnamon.org/?p=1348)
-
