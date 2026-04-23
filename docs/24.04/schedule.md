@@ -63,6 +63,10 @@ Week | Date (Thursday) | 24.04 events
 |... | ||
 |**February 2026**| ||
 |121 | February 12 | [24.04.4 Point Release ](https://wiki.ubuntu.com/PointReleaseProcess)|
+|... | ||
+|**August 2026**| ||
+|149 | August 27 | [24.04.5 Point Release ](https://wiki.ubuntu.com/PointReleaseProcess)|
+|... | ||
 
 ## Planned and potentially disruptive archive-wide activities
 
