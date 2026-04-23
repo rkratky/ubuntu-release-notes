@@ -286,6 +286,8 @@ Any consent that you previously granted to Ubuntu Report will not be carried ove
 :::
 
 ### `PreLogin` and `PostSession` scripts have been removed
+:::{versionremoved} 26.04
+:::
 
 ```{include} /reuse/26.04/session-scripts-removed.txt
 ```
