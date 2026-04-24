@@ -707,13 +707,44 @@ Currently only some hardware architectures are supported and integrated in Canon
 | `gfx1201` | Navi44 / Radeon RX 9070XT, AI PRO R9700 | YES | 
 :::
 
-:::{dropdown} ROCm libraries
+::::{dropdown} ROCm libraries
 The following individual ROCm libraries included, listed by source package name:
 
-```
-amdsmi, hipblas, hipblas-common, hipblaslt, hipcub, hipfft, hipify, hiprand, hipsolver, hipsparse, miopen, pkg-rocm-tools, rccl, rocblas, rocalution, rocm-cmake, rocm-core, rocdbgapi, rocfft, rocm-hipamd, rocminfo, rocm-llvm, rocm-smi-lib, rocprim, rocr-runtime, rocrand, rocsolver, rocsparse, rocthrust, roctracer
-```
+:::{hlist}
+:columns: 3
+
+- `amdsmi`
+- `hipblas`
+- `hipblas-common`
+- `hipblaslt`
+- `hipcub`
+- `hipfft`
+- `hipify`
+- `hiprand`
+- `hipsolver`
+- `hipsparse`
+- `miopen`
+- `pkg-rocm-tools`
+- `rccl`
+- `rocblas`
+- `rocalution`
+- `rocm-cmake`
+- `rocm-core`
+- `rocdbgapi`
+- `rocfft`
+- `rocm-hipamd`
+- `rocminfo`
+- `rocm-llvm`
+- `rocm-smi-lib`
+- `rocprim`
+- `rocr-runtime`
+- `rocrand`
+- `rocsolver`
+- `rocsparse`
+- `rocthrust`
+- `roctracer`
 :::
+::::
 
 :::{dropdown} Install the ROCm software stack
 Two meta-packages are available, depending on your use case and needs. In most scenarios, you don't have to install these packages directly: the individual libraries can be installed as dependencies of end-user applications as needed.
