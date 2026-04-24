@@ -62,7 +62,7 @@ The following individual ROCm libraries are included, listed by source package n
 :::{dropdown} Install the ROCm software stack
 Two meta-packages are available, depending on your use case and needs. In most scenarios, you don't have to install these packages directly: the individual libraries can be installed as dependencies of end-user applications as needed.
 
-- Installs the complete ROCm software stack, including binaries and header files:
+- Install the complete ROCm software stack, including binaries and header files:
 
     ```bash
     apt install rocm
@@ -70,7 +70,7 @@ Two meta-packages are available, depending on your use case and needs. In most s
 
     This is a large set of packages that is most suitable for benchmarking, testing or other scenarios where the full suite of functionality is required and installation size is not a concern.
 
-- Installs only the development libraries and header files for developing ROCm-enabled applications:
+- Install only the development libraries and header files for developing ROCm-enabled applications:
 
     ```bash
     apt install rocm-dev
