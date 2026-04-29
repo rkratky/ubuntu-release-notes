@@ -1080,6 +1080,8 @@ vmem
 VMs
 vnc
 vorlon
+VPN
+VPNs
 vsftpd
 vSwitch
 Vulkan
