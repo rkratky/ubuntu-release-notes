@@ -1,12 +1,10 @@
 (ubuntu-26.10-release-notes)=
 # Ubuntu 26.10 release notes
 
-Ubuntu 26.10 (Stonking Stingray) is currently in development.
-
 These release notes cover new features and changes in Ubuntu 26.10 (Stonking Stingray).
 
-:::{warning}
-Ubuntu 26.10 is currently in development, scheduled to be released in October 2026.
+:::{important}
+Ubuntu 26.10 (Stonking Stingray) is currently in development, scheduled to be released in October 2026.
 :::
 
 For the release schedule of Ubuntu 26.10, refer to:
@@ -16,3 +14,25 @@ For the release schedule of Ubuntu 26.10, refer to:
 
 Release schedule <schedule>
 :::
+
+
+## Support lifespan
+## Upgrades
+## New features in \<VERSION\>
+### Updated Packages
+### Linux kernel \<VERSION\> 🐧
+### systemd \<VERSION\>
+### Toolchain Upgrades 🛠️
+### Default configuration changes ⚙️
+### Ubuntu Desktop
+### Ubuntu Foundations
+### Ubuntu Server
+### OpenStack
+### Platforms
+## Known Issues
+### General
+### Linux kernel
+### Ubuntu Desktop
+### Ubuntu Server
+## Official flavors
+## More information
