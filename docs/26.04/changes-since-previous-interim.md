@@ -659,6 +659,45 @@ Cryptography libraries have been updated to recent versions:
 ```{include} /reuse/26.04/rocm-support.txt
 ```
 
+#### Intel® QuickAssist Technology support has been updated
+
+Intel® QuickAssist Technology (QAT) is a built-in hardware accelerator that offloads cryptography, compression and decompression workloads from the CPU. It delivers high-throughput, low-latency acceleration for TLS, IPsec VPNs, storage compression and cloud-native security services while reducing CPU utilization. It's available on 4th Gen and 5th Gen Intel® Xeon® Scalable processors and on Intel Xeon® 6 processors. 
+
+:::{rubric} Benefits for the user
+:::
+
+Higher service throughput
+: Accelerates encryption and compression to handle more traffic on the same hardware.
+
+Lower total cost of ownership (TCO)
+: Reduces the need for additional servers by offloading CPU-intensive crypto workloads.
+
+Improved user experience
+: Enables faster VPN, SSL/TLS, and secure storage operations.
+
+:::{rubric} Supported use cases
+:::
+
+- Secure network tunnels (IPsec VPN, SSL/TLS)
+- High-throughput data compression for storage or cloud services
+- Telco User Plane Function (UPF) packet processing
+
+:::{rubric} Kernel support
+:::
+
+Intel QAT is enabled in Ubuntu through upstream Linux kernel enablement starting from kernel version 5.15, with continued enhancements and newer CPUs support in later kernel releases.
+
+:::{rubric} User-space components
+:::
+
+| Component | In 24.04 LTS | In 26.04 LTS | Upstream project |
+|-|-|-|-|
+| `qatengine` | 1.5.0 | 2.0.0 | [`QAT_Engine`](https://github.com/intel/QAT_Engine) |
+| `qatzip` | 1.2.0 | 1.3.2 | [`QATzip`](https://github.com/intel/QATzip) |
+| `qatlib` | 24.02.0 | 26.02.0 | [`qatlib`](https://github.com/intel/qatlib) |
+| `ipp-crypto` | 2021.10.0 | 1:1.0.0 | [`cryptography-primitives`](https://github.com/intel/cryptography-primitives) |
+| `intel-ipsec-mb` | 1.5 | 2.0.1 | [`cryptography-primitives`](https://github.com/intel/cryptography-primitives) |
+
 
 ## Backwards-incompatible changes
 
