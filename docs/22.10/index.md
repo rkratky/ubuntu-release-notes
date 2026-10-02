@@ -101,7 +101,7 @@ When using GSSAPI/GSS-SPNEGO authentication over an encrypted transport like `ld
 
 ### Bind9
 
-* Add support for remote TLS certificate verification, both to `named` `https://bind9.readthedocs.io/en/v9_18_7/manpages.html#std-iscman-named` and [`dig`](https://bind9.readthedocs.io/en/v9_18_7/manpages.html#std-iscman-dig), making it possible to implement Strict and Mutual TLS authentication, as described in [**RFC 9103**](https://datatracker.ietf.org/doc/html/rfc9103.html), Section 9.3.
+* Add support for remote TLS certificate verification, both to [`named`](https://bind9.readthedocs.io/en/v9_18_7/manpages.html#std-iscman-named) and [`dig`](https://bind9.readthedocs.io/en/v9_18_7/manpages.html#std-iscman-dig), making it possible to implement Strict and Mutual TLS authentication, as described in [**RFC 9103**](https://datatracker.ietf.org/doc/html/rfc9103.html), Section 9.3.
 
 ### Rsync
 
@@ -216,9 +216,9 @@ Make sure you read the [OpenStack Charm Release Notes](https://docs.openstack.or
 
 ### Raspberry Pi 🍓
 
-* Ubuntu 22.10 includes support for several "embedded" displays on the Raspberry Pi, under both server and desktop configurations. Supported displays include the official DSI display `https://www.raspberrypi.com/products/raspberry-pi-touch-display/` (though, see Known Issues below), the [Hyperpixel](https://github.com/pimoroni/hyperpixel4) and the range of [Inky displays](https://github.com/pimoroni/inky) ([bug 1992778](https://launchpad.net/bugs/1992778)). See [this post](https://waldorf.waveform.org.uk/2022/hyping-pixels.html) for full details on the Hyperpixel.
+* Ubuntu 22.10 includes support for several "embedded" displays on the Raspberry Pi, under both server and desktop configurations. Supported displays include the [official DSI display](https://www.raspberrypi.com/products/raspberry-pi-touch-display/) (though, see Known Issues below), the [Hyperpixel](https://github.com/pimoroni/hyperpixel4) and the range of [Inky displays](https://github.com/pimoroni/inky) ([bug 1992778](https://launchpad.net/bugs/1992778)). See [this post](https://waldorf.waveform.org.uk/2022/hyping-pixels.html) for full details on the Hyperpixel.
 
-* Ubuntu 22.10 builds on existing support for the Raspberry Pi Pico `https://www.raspberrypi.com/products/raspberry-pi-pico/` by adding the [`mpremote`](https://pypi.org/project/mpremote/) utility to the archive ([bug 1992777](https://launchpad.net/bugs/1992777)), permitting easier development with [MicroPython](https://docs.micropython.org/en/latest/) environments with facilities including the ability to mount local directories on your attached MicroPython device.
+* Ubuntu 22.10 builds on existing support for the [Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/) by adding the [`mpremote`](https://pypi.org/project/mpremote/) utility to the archive ([bug 1992777](https://launchpad.net/bugs/1992777)), permitting easier development with [MicroPython](https://docs.micropython.org/en/latest/) environments with facilities including the ability to mount local directories on your attached MicroPython device.
 
 * The 5.19 kernel in Ubuntu 22.10 disables the (long deprecated) GPIO sysfs interface `https://docs.kernel.org/admin-guide/gpio/sysfs.html` ([bug 1918583](https://bugs.launchpad.net/bugs/1918583)). This means that several common GPIO libraries (including [RPi.GPIO](https://pypi.org/project/RPi.GPIO/)) cannot operate. A shim providing [compatibility with RPi.GPIO](https://rpi-lgpio.readthedocs.io/en/latest/) has been created and is available in Kinetic in the `python3-rpi-lgpio` package. See [this post](https://waldorf.waveform.org.uk/2022/the-one-where-dave-breaks-stuff.html) for full details.
 
@@ -286,7 +286,7 @@ None
 
 * Various kernel modules have been moved from the `linux-modules-raspi` package in order to reduce the initramfs size. If you find an application failing due to missing kernel modules, please try `sudo apt install linux-modules-extra-raspi`
 
-* The legacy camera stack (MMAL based) is no longer supported on arm64; libcamera `https://www.raspberrypi.com/documentation/accessories/camera.html#libcamera-and-libcamera-apps` is the supported method of using the Pi Camera Module on the arm64 architecture (the boot-time configuration will automatically load overlays for official modules; unofficial camera modules need the relevant overlay added to `config.txt` on the boot partition)
+* The legacy camera stack (MMAL based) is no longer supported on arm64; [libcamera](https://www.raspberrypi.com/documentation/accessories/camera.html#libcamera-and-libcamera-apps) is the supported method of using the Pi Camera Module on the arm64 architecture (the boot-time configuration will automatically load overlays for official modules; unofficial camera modules need the relevant overlay added to `config.txt` on the boot partition)
 
 * After initial user setup on the desktop image, several packages can still be autoremoved [bug 1925265](https://launchpad.net/bugs/1925265)); run `sudo apt autoremove --purge` to work around this
 
