@@ -999,6 +999,12 @@ For other known issues, see [FDE specific bug reports](https://bugs.launchpad.ne
 
 Installing `ubuntu-fonts-classic` results in a non-Ubuntu font being displayed ([LP#2083683](https://bugs.launchpad.net/bugs/2083683)). To resolve this, install `gnome-tweaks` and set ‘Interface Text’ to ‘Ubuntu’.
 
+#### The "Foreign Packages Installed" prompt is too long to scroll
+
+When upgrading from Ubuntu 24.04 LTS to Ubuntu 26.04 LTS, the "Foreign Packages Installed" prompt can show a package list so long that it cannot be scrolled down to reach the options.
+
+As a workaround, press Enter to cancel the upgrade, remove the unneeded foreign packages, and start the upgrade again. In the reported case, the list consisted mostly of `erlang*` packages, which `sudo apt purge erlang*` removed. Once the list is shorter, the options to continue (`[no]` / `[yes]`) become visible.
+
 
 ### Server issues
 
