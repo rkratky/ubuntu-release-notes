@@ -290,6 +290,12 @@ maintainable and memory-safe foundation.
 `gpg` and `gpgv` are still available in the main repository as of Ubuntu 26.10.
 :::
 
+#### OpenSSL 4
+
+OpenSSL 4 introduces Encrypted Client Hello (ECH), expanded QUIC support, continued post-quantum cryptography improvements, and further API and architectural cleanup. It also includes various security and bug fixes through the 4.0.3 release, along with improved support for modern TLS features and hardware.
+
+See the [4.0.0](https://github.com/openssl/openssl/releases/tag/openssl-4.0.0), [4.0.1](https://github.com/openssl/openssl/releases/tag/openssl-4.0.1), [4.0.2](https://github.com/openssl/openssl/releases/tag/openssl-4.0.2), and [4.0.3](https://github.com/openssl/openssl/releases/tag/openssl-4.0.3) upstream release notes for full details.
+
 ### Hardware support features
 
 #### Support for new RISC-V platforms
